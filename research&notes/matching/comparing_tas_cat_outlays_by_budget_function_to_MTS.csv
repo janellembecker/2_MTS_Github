@@ -1,0 +1,23 @@
+API,,,,MTS,,,,,,,,,,,
+treasury_account.budget_function_title,gross_outlay_amount_by_program_object_class_cpe,gross outlay (M),,Net outlays Jan,$ M,,Net outlays Feb,$ M,,Net outlays Mar,$ M,,Net Outlays Q2 (MTS sum),$M (Q2),API value
+Administration of Justice,34915742088,34915.74209,,   National Defense,"40,315",,   National Defense,"45,891",,   National Defense,"54,413",,National Defense,"140,619",463663
+Agriculture,8850719323,8850.719323,,   International Affairs,"4,748",,   International Affairs,"4,327",,   International Affairs,"3,685",,International Affairs,"12,760",47833
+Commerce and Housing Credit,12044444043,12044.44404,,"   General Science, Space, and Technology","2,089",,"   General Science, Space, and Technology","2,296",,"   General Science, Space, and Technology","2,375",,"General Science, Space, and Technology","6,760",16655
+Community and Regional Development,18465820941,18465.82094,,   Energy,410,,   Energy,160,,   Energy,489,,Energy,"1,059",6457
+"Education, Training, Employment, and Social Services",58307006872,58307.00687,,   Natural Resources and Environment,"3,462",,   Natural Resources and Environment,"2,815",,   Natural Resources and Environment,"3,327",,Natural Resources and Environment,"9,604",29516
+Energy,6456653899,6456.653899,,   Agriculture,"1,239",,   Agriculture,612,,   Agriculture,447,,Agriculture,"2,298",8851
+General Government,2.13E+11,213313.5969,,   Commerce and Housing Credit,784,,   Commerce and Housing Credit,-588,,   Commerce and Housing Credit,"-11,205",,Commerce and Housing Credit,"-11,009",12044
+"General Science, Space, and Technology",16655157093,16655.15709,,   Transportation,"6,168",,   Transportation,"6,082",,   Transportation,"7,184",,Transportation,"19,434",50363
+Governmental Receipts,127614.16,0.12761416,,   Community and Regional Development,"2,387",,   Community and Regional Development,"1,734",,   Community and Regional Development,"1,486",,Community and Regional Development,"5,607",18466
+Health,3.05E+11,304675.837,,"   Education, Training, Employment, and Social Services","10,617",,"   Education, Training, Employment, and Social Services","11,642",,"   Education, Training, Employment, and Social Services","9,068",,"Education, Training, Employment, and Social Services","31,327",58307
+Income Security,3.13E+11,312860.9843,,   Health,"42,903",,   Health,"43,785",,   Health,"48,800",,Health,"135,488",304676
+International Affairs,47833368459,47833.36846,,   Medicare,"45,687",,   Medicare,"45,668",,   Medicare,"47,889",,Medicare,"139,244",515082
+Medicare,5.15E+11,515082.4154,,   Income Security,"27,056",,   Income Security,"86,301",,   Income Security,"53,228",,Income Security,"166,585",312861
+National Defense,4.64E+11,463662.6486,,   Social Security,"78,281",,   Social Security,"77,768",,   Social Security,"75,698",,Social Security,"231,747",490569
+Natural Resources and Environment,29516153985,29516.15398,,   Veterans Benefits and Services,"7,410",,   Veterans Benefits and Services,"14,328",,   Veterans Benefits and Services,"14,233",,Veterans Benefits and Services,"35,971",92549
+Net Interest,2.25E+11,224893.44,,   Administration of Justice,"5,840",,   Administration of Justice,"4,063",,   Administration of Justice,"4,928",,Administration of Justice,"14,831",34916
+Social Security,4.91E+11,490569.0222,,   General Government,"-1,639",,   General Government,"1,776",,   General Government,"2,145",,General Government,"2,282",213314
+Transportation,50363198340,50363.19834,,   Net Interest,"21,692",,   Net Interest,"21,176",,   Net Interest,"23,884",,Net Interest,"66,752",224893
+Veterans Benefits and Services,92549321474,92549.32147,,   Undistributed Offsetting Receipts,"-6,637",,   Undistributed Offsetting Receipts,"-6,079",,   Undistributed Offsetting Receipts,"-6,185",,Undistributed Offsetting Receipts,"-18,901",#N/A
+,,,,   Total,"292,812",,   Total,"363,757",,   Total,"335,891",,Total,"992,460",#N/A
+,,2901015.659,,,,,,,,,,,,,

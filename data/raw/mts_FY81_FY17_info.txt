@@ -1,0 +1,3 @@
+These files contain the monthly receipts/outlays and deficit/surplus of the United States published in Table 1 of the Monthly Treasury Statement, for fiscal years 1981-2017. The figures reflect backdated adjustments and may be amended (monthly) based on agency reporting.
+
+https://www.fiscal.treasury.gov/fsreports/rpt/mthTreasStmt/current.htm

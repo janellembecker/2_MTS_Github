@@ -1,0 +1,13 @@
+Quarterly Distributed Offsetting Receipts by Department Report
+
+This report provides detailed information for transactions reported on the Statement of Transactions (FMS 224, 1220, and 1221) for distributed offsetting receipts reflected in the Monthly Treasury Statement.
+
+Agencies can use the report as an additional tool to assist with identifying and resolving differences between monthly budgetary reporting and the distributed offsetting receipts found on line 19C of the Statement of Budgetary Resources.
+
+Because of the implementation of CARS in March 2015, we changed the way we present the quarterly receipts starting in the 2nd quarter of 2015.
+
+
+### Q2 fy 2015 -----------------------
+Note: To calculate the 2nd quarter totals for FY 2015, subtract the 1st quarter balances from the current year to date as of March 31st. If you have any questions, please contact the Budget Reports Division on 202-874-8044
+
+https://www.fiscal.treasury.gov/fsreports/rpt/mthTreasStmt/receipts_by_dept_historical.htm

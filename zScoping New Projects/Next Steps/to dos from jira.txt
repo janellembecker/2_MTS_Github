@@ -1,0 +1,19 @@
+Possibilities: 
+
+Outlays by function or one at a time, over a timeline showing 
+--presidential administration
+--major policies
+
+Receipts by source or one at a time, over a timeline showing
+--presidential administration
+--major policies
+
+Add in hover overs
+--see agency breakdown within that budget function, a way to drill down a level
+--see tidbits, facts for through Q2 spending for a particular area of spending 
+
+Other possibilities:
+Exploring government receipts from personal income tax  and what % comes from each tax bracket .... does this already exist ?
+
+Visualizing R/O over time compared to presidents' budgets or seeing what predicts future R/O better--a prez budget or past R/O?
+...does this already exist?

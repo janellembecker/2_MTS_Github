@@ -1,0 +1,55 @@
+Things to Note:
+
+***Ultimate goal: overlapping choropleths on a dashboard that respond to a dropdown menu
+Show the sheet depending on the dropdown
+----------------------------------------
+
+***Just as in PPT, there are notes/captions at the bottom of each worksheet. If someone didn't edit these, Tableau's default is to tell you what was done.
+Helpful for: replication & looking up details
+(e.g., did you include null values?)
+
+***Seeing the data as a spreadsheet
+
+***Dimension vs. Measure?
+
+***Region choro--oops no geo! mark as geo
+	--using region or create from...
+	--heirarchy
+
+***Zooming/moving on map
+
+***Name and Duplicate sheet
+
+***Create dashboard to see both
+	--start side by side
+
+***Add in toggle
+	--Can't drag paramter to filter-->
+		Create calc field
+	--Name calc field diff than param
+	--DON'T show other map when X selected
+
+*** Create dash with bins
+	--ensure toggle works
+	--hide titles
+	--create dyanmic title?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
