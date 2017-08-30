@@ -1,0 +1,902 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 10300.17.0515.2100                               -->
+<workbook source-build='10.3.0 (10300.17.0515.2100)' source-platform='win' version='10.3' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='source-type-amount (fig0_cover_0517_modified_v2)' inline='true' name='federated.1kleaut1e76t4s1a1jhmh0wcpchd' version='10.3'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='fig0_cover_0517_modified_v2' name='excel-direct.1j93wj91qopxau18dsvdm1vdhq7u'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='Data/_Sankey_Cover_Figure_Revamp/fig0_cover_0517_modified_v2.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation connection='excel-direct.1j93wj91qopxau18dsvdm1vdhq7u' name='source-type-amount' table='[&apos;source-type-amount$&apos;]' type='table'>
+          <columns gridOrigin='A1:D59:no:A1:D59:0' header='yes' outcome='6'>
+            <column datatype='string' name='Source_or_Function' ordinal='0' />
+            <column datatype='string' name='Type' ordinal='1' />
+            <column datatype='integer' name='Amount' ordinal='2' />
+            <column datatype='string' name='VizSize' ordinal='3' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>Source_or_Function</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Source_or_Function]</local-name>
+            <parent-name>[source-type-amount]</parent-name>
+            <remote-alias>Source_or_Function</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Type</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Type]</local-name>
+            <parent-name>[source-type-amount]</parent-name>
+            <remote-alias>Type</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Amount</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Amount]</local-name>
+            <parent-name>[source-type-amount]</parent-name>
+            <remote-alias>Amount</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>VizSize</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[VizSize]</local-name>
+            <parent-name>[source-type-amount]</parent-name>
+            <remote-alias>VizSize</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[source-type-amount]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:D59:no:A1:D59:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='_ToPad' datatype='integer' name='[Calculation_482729626680377344]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='if [VizSize]=&quot;Source&quot; then 1&#13;&#10;else 49&#13;&#10;END' />
+      </column>
+      <column caption='_t' datatype='real' name='[Calculation_482729626681212929]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='(index() - 25)/4'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='_Rank 1' datatype='real' name='[Calculation_482729626681708546]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='RUNNING_SUM(sum([Amount]))/total(sum([Amount]))'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='_Sigmoid' datatype='real' name='[Calculation_482729626682675203]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='1/(1+exp(1)^-[Calculation_482729626681212929])'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='_Curve' datatype='real' name='[Calculation_482729626684575748]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Calculation_482729626681708546] + (([Rank 1 (copy)] - [Calculation_482729626681708546])*[Calculation_482729626682675203])'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='_Amount Sizing' datatype='real' name='[Calculation_482729626686722054]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='WINDOW_AVG((sum([Amount])))'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='_Groups_Source_or_Function' datatype='string' name='[Outlay Functions]' role='dimension' type='nominal'>
+        <calculation class='categorical-bin' column='[Source_or_Function]' new-bin='true'>
+          <bin default-name='false' value='&quot;Functions&quot;'>
+            <value>&quot;Administration of Justice&quot;</value>
+            <value>&quot;Agriculture&quot;</value>
+            <value>&quot;Commerce and Housing Credit&quot;</value>
+            <value>&quot;Community and Regional Development&quot;</value>
+            <value>&quot;Education, Training, Employment, and Social Services&quot;</value>
+            <value>&quot;Energy&quot;</value>
+            <value>&quot;General Government&quot;</value>
+            <value>&quot;General Science, Space, and Technology&quot;</value>
+            <value>&quot;Health&quot;</value>
+            <value>&quot;Income Security&quot;</value>
+            <value>&quot;International Affairs&quot;</value>
+            <value>&quot;Medicare&quot;</value>
+            <value>&quot;National Defense&quot;</value>
+            <value>&quot;Natural Resources and Environment&quot;</value>
+            <value>&quot;Net Interest&quot;</value>
+            <value>&quot;Social Security&quot;</value>
+            <value>&quot;Transportation&quot;</value>
+            <value>&quot;Undistributed Offsetting Receipts&quot;</value>
+            <value>&quot;Veterans Benefits and Services&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Sources&quot;'>
+            <value>&quot;Corporation Income Taxes&quot;</value>
+            <value>&quot;Customs Duties&quot;</value>
+            <value>&quot;Deficit&quot;</value>
+            <value>&quot;Estate and Gift Taxes&quot;</value>
+            <value>&quot;Excise Taxes&quot;</value>
+            <value>&quot;Individual Income Taxes&quot;</value>
+            <value>&quot;Miscellaneous Receipts&quot;</value>
+            <value>&quot;Social Insurance and Retirement Receipts&quot;</value>
+          </bin>
+        </calculation>
+      </column>
+      <column caption='_Rank 2' datatype='real' name='[Rank 1 (copy)]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='RUNNING_SUM(sum([Amount]))/total(sum([Amount]))'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Source or Function' datatype='string' name='[Source_or_Function]' role='dimension' type='nominal' />
+      <column aggregation='None' caption='_Padded' datatype='integer' name='[ToPad (bin)]' role='dimension' type='ordinal'>
+        <calculation class='bin' decimals='0' formula='[Calculation_482729626680377344]' peg='0' size='1' />
+      </column>
+      <column datatype='string' name='[Type]' role='dimension' type='nominal' />
+      <column caption='Viz Size' datatype='string' name='[VizSize]' role='dimension' type='nominal' />
+      <column-instance column='[Source_or_Function]' derivation='None' name='[none:Source_or_Function:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Type]' derivation='None' name='[none:Type:nk]' pivot='key' type='nominal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.468986' measure-ordering='alphabetic' measure-percentage='0.531014' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Source_or_Function:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;Energy&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Administration of Justice&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Natural Resources and Environment&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Corporation Income Taxes&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Transportation&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;General Science, Space, and Technology&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Estate and Gift Taxes&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Customs Duties&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Undistributed Offsetting Receipts&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Miscellaneous Receipts&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Agriculture&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Net Interest&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;International Affairs&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Deficit&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Veterans Benefits and Services&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Health&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Income Security&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Medicare&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;National Defense&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Excise Taxes&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Education, Training, Employment, and Social Services&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Commerce and Housing Credit&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Social Insurance and Retirement Receipts&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Individual Income Taxes&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;General Government&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Community and Regional Development&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Social Security&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Type:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Outlay&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Receipt&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <actions>
+    <action caption='Source/Func Highlight' name='[Action1]'>
+      <activation auto-clear='true' type='on-hover' />
+      <source dashboard='Dashboard 1' type='sheet' worksheet='bar sources' />
+      <command command='tsc:brush'>
+        <param name='exclude' value='bar type' />
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+    <action caption='Type Highlight' name='[Action2]'>
+      <activation auto-clear='true' type='on-hover' />
+      <source dashboard='Dashboard 1' type='sheet' worksheet='bar type' />
+      <command command='tsc:brush'>
+        <param name='exclude' value='bar sources' />
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='bar functions'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='source-type-amount (fig0_cover_0517_modified_v2)' name='federated.1kleaut1e76t4s1a1jhmh0wcpchd' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1kleaut1e76t4s1a1jhmh0wcpchd'>
+            <column datatype='integer' name='[Amount]' role='measure' type='quantitative' />
+            <column caption='_Groups_Source_or_Function' datatype='string' name='[Outlay Functions]' role='dimension' type='nominal'>
+              <calculation class='categorical-bin' column='[Source_or_Function]' new-bin='true'>
+                <bin default-name='false' value='&quot;Functions&quot;'>
+                  <value>&quot;Administration of Justice&quot;</value>
+                  <value>&quot;Agriculture&quot;</value>
+                  <value>&quot;Commerce and Housing Credit&quot;</value>
+                  <value>&quot;Community and Regional Development&quot;</value>
+                  <value>&quot;Education, Training, Employment, and Social Services&quot;</value>
+                  <value>&quot;Energy&quot;</value>
+                  <value>&quot;General Government&quot;</value>
+                  <value>&quot;General Science, Space, and Technology&quot;</value>
+                  <value>&quot;Health&quot;</value>
+                  <value>&quot;Income Security&quot;</value>
+                  <value>&quot;International Affairs&quot;</value>
+                  <value>&quot;Medicare&quot;</value>
+                  <value>&quot;National Defense&quot;</value>
+                  <value>&quot;Natural Resources and Environment&quot;</value>
+                  <value>&quot;Net Interest&quot;</value>
+                  <value>&quot;Social Security&quot;</value>
+                  <value>&quot;Transportation&quot;</value>
+                  <value>&quot;Undistributed Offsetting Receipts&quot;</value>
+                  <value>&quot;Veterans Benefits and Services&quot;</value>
+                </bin>
+                <bin default-name='false' value='&quot;Sources&quot;'>
+                  <value>&quot;Corporation Income Taxes&quot;</value>
+                  <value>&quot;Customs Duties&quot;</value>
+                  <value>&quot;Deficit&quot;</value>
+                  <value>&quot;Estate and Gift Taxes&quot;</value>
+                  <value>&quot;Excise Taxes&quot;</value>
+                  <value>&quot;Individual Income Taxes&quot;</value>
+                  <value>&quot;Miscellaneous Receipts&quot;</value>
+                  <value>&quot;Social Insurance and Retirement Receipts&quot;</value>
+                </bin>
+              </calculation>
+            </column>
+            <column caption='Source or Function' datatype='string' name='[Source_or_Function]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Type]' role='dimension' type='nominal' />
+            <column-instance column='[Type]' derivation='Attribute' name='[attr:Type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Source_or_Function]' derivation='None' name='[none:Source_or_Function:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Amount]' derivation='Sum' name='[pcto:sum:Amount:qk:2]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Columns' type='PctTotal' />
+            </column-instance>
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1kleaut1e76t4s1a1jhmh0wcpchd].[Outlay Functions]'>
+            <groupfilter function='member' level='[Outlay Functions]' member='&quot;Functions&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1kleaut1e76t4s1a1jhmh0wcpchd].[Outlay Functions]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' value='189' />
+            <format attr='text-format' field='[federated.1kleaut1e76t4s1a1jhmh0wcpchd].[pcto:sum:Amount:qk:2]' value='p0%' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1kleaut1e76t4s1a1jhmh0wcpchd].[none:Source_or_Function:nk]' />
+              <tooltip column='[federated.1kleaut1e76t4s1a1jhmh0wcpchd].[attr:Type:nk]' />
+              <text column='[federated.1kleaut1e76t4s1a1jhmh0wcpchd].[pcto:sum:Amount:qk:2]' />
+              <text column='[federated.1kleaut1e76t4s1a1jhmh0wcpchd].[none:Source_or_Function:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1kleaut1e76t4s1a1jhmh0wcpchd].[pcto:sum:Amount:qk:2]</rows>
+        <cols />
+      </table>
+    </worksheet>
+    <worksheet name='bar source/func'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='source-type-amount (fig0_cover_0517_modified_v2)' name='federated.1kleaut1e76t4s1a1jhmh0wcpchd' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1kleaut1e76t4s1a1jhmh0wcpchd'>
+            <column datatype='integer' name='[Amount]' role='measure' type='quantitative' />
+            <column caption='Source or Function' datatype='string' name='[Source_or_Function]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Type]' role='dimension' type='nominal' />
+            <column-instance column='[Type]' derivation='Attribute' name='[attr:Type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Source_or_Function]' derivation='None' name='[none:Source_or_Function:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Amount]' derivation='Sum' name='[pcto:sum:Amount:qk:2]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Columns' type='PctTotal' />
+            </column-instance>
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' value='189' />
+            <format attr='text-format' field='[federated.1kleaut1e76t4s1a1jhmh0wcpchd].[pcto:sum:Amount:qk:2]' value='p0%' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1kleaut1e76t4s1a1jhmh0wcpchd].[none:Source_or_Function:nk]' />
+              <tooltip column='[federated.1kleaut1e76t4s1a1jhmh0wcpchd].[attr:Type:nk]' />
+              <text column='[federated.1kleaut1e76t4s1a1jhmh0wcpchd].[pcto:sum:Amount:qk:2]' />
+              <text column='[federated.1kleaut1e76t4s1a1jhmh0wcpchd].[none:Source_or_Function:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1kleaut1e76t4s1a1jhmh0wcpchd].[pcto:sum:Amount:qk:2]</rows>
+        <cols />
+      </table>
+    </worksheet>
+    <worksheet name='bar sources'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='source-type-amount (fig0_cover_0517_modified_v2)' name='federated.1kleaut1e76t4s1a1jhmh0wcpchd' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1kleaut1e76t4s1a1jhmh0wcpchd'>
+            <column datatype='integer' name='[Amount]' role='measure' type='quantitative' />
+            <column caption='_Groups_Source_or_Function' datatype='string' name='[Outlay Functions]' role='dimension' type='nominal'>
+              <calculation class='categorical-bin' column='[Source_or_Function]' new-bin='true'>
+                <bin default-name='false' value='&quot;Functions&quot;'>
+                  <value>&quot;Administration of Justice&quot;</value>
+                  <value>&quot;Agriculture&quot;</value>
+                  <value>&quot;Commerce and Housing Credit&quot;</value>
+                  <value>&quot;Community and Regional Development&quot;</value>
+                  <value>&quot;Education, Training, Employment, and Social Services&quot;</value>
+                  <value>&quot;Energy&quot;</value>
+                  <value>&quot;General Government&quot;</value>
+                  <value>&quot;General Science, Space, and Technology&quot;</value>
+                  <value>&quot;Health&quot;</value>
+                  <value>&quot;Income Security&quot;</value>
+                  <value>&quot;International Affairs&quot;</value>
+                  <value>&quot;Medicare&quot;</value>
+                  <value>&quot;National Defense&quot;</value>
+                  <value>&quot;Natural Resources and Environment&quot;</value>
+                  <value>&quot;Net Interest&quot;</value>
+                  <value>&quot;Social Security&quot;</value>
+                  <value>&quot;Transportation&quot;</value>
+                  <value>&quot;Undistributed Offsetting Receipts&quot;</value>
+                  <value>&quot;Veterans Benefits and Services&quot;</value>
+                </bin>
+                <bin default-name='false' value='&quot;Sources&quot;'>
+                  <value>&quot;Corporation Income Taxes&quot;</value>
+                  <value>&quot;Customs Duties&quot;</value>
+                  <value>&quot;Deficit&quot;</value>
+                  <value>&quot;Estate and Gift Taxes&quot;</value>
+                  <value>&quot;Excise Taxes&quot;</value>
+                  <value>&quot;Individual Income Taxes&quot;</value>
+                  <value>&quot;Miscellaneous Receipts&quot;</value>
+                  <value>&quot;Social Insurance and Retirement Receipts&quot;</value>
+                </bin>
+              </calculation>
+            </column>
+            <column caption='Source or Function' datatype='string' name='[Source_or_Function]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Type]' role='dimension' type='nominal' />
+            <column-instance column='[Type]' derivation='Attribute' name='[attr:Type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Source_or_Function]' derivation='None' name='[none:Source_or_Function:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Amount]' derivation='Sum' name='[pcto:sum:Amount:qk:2]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Columns' type='PctTotal' />
+            </column-instance>
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1kleaut1e76t4s1a1jhmh0wcpchd].[Outlay Functions]'>
+            <groupfilter function='member' level='[Outlay Functions]' member='&quot;Sources&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1kleaut1e76t4s1a1jhmh0wcpchd].[Outlay Functions]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.1kleaut1e76t4s1a1jhmh0wcpchd].[pcto:sum:Amount:qk:2]' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' value='189' />
+            <format attr='text-format' field='[federated.1kleaut1e76t4s1a1jhmh0wcpchd].[pcto:sum:Amount:qk:2]' value='p0%' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1kleaut1e76t4s1a1jhmh0wcpchd].[none:Source_or_Function:nk]' />
+              <tooltip column='[federated.1kleaut1e76t4s1a1jhmh0wcpchd].[attr:Type:nk]' />
+              <text column='[federated.1kleaut1e76t4s1a1jhmh0wcpchd].[none:Source_or_Function:nk]' />
+              <text column='[federated.1kleaut1e76t4s1a1jhmh0wcpchd].[pcto:sum:Amount:qk:2]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1kleaut1e76t4s1a1jhmh0wcpchd].[pcto:sum:Amount:qk:2]</rows>
+        <cols />
+      </table>
+    </worksheet>
+    <worksheet name='bar type'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='source-type-amount (fig0_cover_0517_modified_v2)' name='federated.1kleaut1e76t4s1a1jhmh0wcpchd' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1kleaut1e76t4s1a1jhmh0wcpchd'>
+            <column datatype='integer' name='[Amount]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Type]' role='dimension' type='nominal' />
+            <column-instance column='[Type]' derivation='Attribute' name='[attr:Type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Type]' derivation='None' name='[none:Type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Amount]' derivation='Sum' name='[pcto:sum:Amount:qk:2]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Columns' type='PctTotal' />
+            </column-instance>
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.1kleaut1e76t4s1a1jhmh0wcpchd].[pcto:sum:Amount:qk:2]' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' value='189' />
+            <format attr='text-format' field='[federated.1kleaut1e76t4s1a1jhmh0wcpchd].[pcto:sum:Amount:qk:2]' value='p0%' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1kleaut1e76t4s1a1jhmh0wcpchd].[none:Type:nk]' />
+              <text column='[federated.1kleaut1e76t4s1a1jhmh0wcpchd].[none:Type:nk]' />
+              <tooltip column='[federated.1kleaut1e76t4s1a1jhmh0wcpchd].[attr:Type:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1kleaut1e76t4s1a1jhmh0wcpchd].[pcto:sum:Amount:qk:2]</rows>
+        <cols />
+      </table>
+    </worksheet>
+    <worksheet name='curves'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='source-type-amount (fig0_cover_0517_modified_v2)' name='federated.1kleaut1e76t4s1a1jhmh0wcpchd' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1kleaut1e76t4s1a1jhmh0wcpchd'>
+            <column datatype='integer' name='[Amount]' role='measure' type='quantitative' />
+            <column caption='_ToPad' datatype='integer' name='[Calculation_482729626680377344]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='if [VizSize]=&quot;Source&quot; then 1&#13;&#10;else 49&#13;&#10;END' />
+            </column>
+            <column caption='_t' datatype='real' name='[Calculation_482729626681212929]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='(index() - 25)/4'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='_Rank 1' datatype='real' name='[Calculation_482729626681708546]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='RUNNING_SUM(sum([Amount]))/total(sum([Amount]))'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='_Sigmoid' datatype='real' name='[Calculation_482729626682675203]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='1/(1+exp(1)^-[Calculation_482729626681212929])'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='_Curve' datatype='real' name='[Calculation_482729626684575748]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Calculation_482729626681708546] + (([Rank 1 (copy)] - [Calculation_482729626681708546])*[Calculation_482729626682675203])'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='_Amount Sizing' datatype='real' name='[Calculation_482729626686722054]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='WINDOW_AVG((sum([Amount])))'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='_Rank 2' datatype='real' name='[Rank 1 (copy)]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='RUNNING_SUM(sum([Amount]))/total(sum([Amount]))'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Source or Function' datatype='string' name='[Source_or_Function]' role='dimension' type='nominal' />
+            <column aggregation='None' caption='_Padded' datatype='integer' name='[ToPad (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='0' formula='[Calculation_482729626680377344]' peg='0' size='1' />
+            </column>
+            <column datatype='string' name='[Type]' role='dimension' type='nominal' />
+            <column caption='Viz Size' datatype='string' name='[VizSize]' role='dimension' type='nominal' />
+            <column-instance column='[Source_or_Function]' derivation='None' name='[none:Source_or_Function:nk]' pivot='key' type='nominal' />
+            <column-instance column='[ToPad (bin)]' derivation='None' name='[none:ToPad (bin):ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Type]' derivation='None' name='[none:Type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_482729626681212929]' derivation='User' name='[usr:Calculation_482729626681212929:qk:2]' pivot='key' type='quantitative'>
+              <table-calc ordering-field='[federated.1kleaut1e76t4s1a1jhmh0wcpchd].[ToPad (bin)]' ordering-type='Field' />
+            </column-instance>
+            <column-instance column='[Calculation_482729626681708546]' derivation='User' name='[usr:Calculation_482729626681708546:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Field'>
+                <order field='[federated.1kleaut1e76t4s1a1jhmh0wcpchd].[Source_or_Function]' />
+                <order field='[federated.1kleaut1e76t4s1a1jhmh0wcpchd].[Type]' />
+                <order field='[federated.1kleaut1e76t4s1a1jhmh0wcpchd].[ToPad (bin)]' />
+              </table-calc>
+            </column-instance>
+            <column-instance column='[Calculation_482729626684575748]' derivation='User' name='[usr:Calculation_482729626684575748:qk:21]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' />
+              <table-calc field='[federated.1kleaut1e76t4s1a1jhmh0wcpchd].[Calculation_482729626681708546]' ordering-type='Field'>
+                <order field='[federated.1kleaut1e76t4s1a1jhmh0wcpchd].[Source_or_Function]' />
+                <order field='[federated.1kleaut1e76t4s1a1jhmh0wcpchd].[Type]' />
+                <order field='[federated.1kleaut1e76t4s1a1jhmh0wcpchd].[ToPad (bin)]' />
+              </table-calc>
+              <table-calc field='[federated.1kleaut1e76t4s1a1jhmh0wcpchd].[Rank 1 (copy)]' ordering-type='Field'>
+                <order field='[federated.1kleaut1e76t4s1a1jhmh0wcpchd].[Type]' />
+                <order field='[federated.1kleaut1e76t4s1a1jhmh0wcpchd].[Source_or_Function]' />
+                <order field='[federated.1kleaut1e76t4s1a1jhmh0wcpchd].[ToPad (bin)]' />
+              </table-calc>
+              <table-calc field='[federated.1kleaut1e76t4s1a1jhmh0wcpchd].[Calculation_482729626682675203]' ordering-type='Rows' />
+              <table-calc field='[federated.1kleaut1e76t4s1a1jhmh0wcpchd].[Calculation_482729626681212929]' ordering-field='[federated.1kleaut1e76t4s1a1jhmh0wcpchd].[ToPad (bin)]' ordering-type='Field' />
+            </column-instance>
+            <column-instance column='[Calculation_482729626686722054]' derivation='User' name='[usr:Calculation_482729626686722054:qk:2]' pivot='key' type='quantitative'>
+              <table-calc ordering-field='[federated.1kleaut1e76t4s1a1jhmh0wcpchd].[ToPad (bin)]' ordering-type='Field' />
+            </column-instance>
+            <column-instance column='[Rank 1 (copy)]' derivation='User' name='[usr:Rank 1 (copy):qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Field'>
+                <order field='[federated.1kleaut1e76t4s1a1jhmh0wcpchd].[Type]' />
+                <order field='[federated.1kleaut1e76t4s1a1jhmh0wcpchd].[Source_or_Function]' />
+                <order field='[federated.1kleaut1e76t4s1a1jhmh0wcpchd].[ToPad (bin)]' />
+              </table-calc>
+            </column-instance>
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1kleaut1e76t4s1a1jhmh0wcpchd].[usr:Calculation_482729626681212929:qk:2]' field-type='quantitative' max='5.0' min='-5.0' range-type='fixed' scope='cols' type='space' />
+            <format attr='subtitle' class='0' field='[federated.1kleaut1e76t4s1a1jhmh0wcpchd].[usr:Calculation_482729626681212929:qk:2]' scope='cols' value='' />
+            <format attr='auto-subtitle' class='0' field='[federated.1kleaut1e76t4s1a1jhmh0wcpchd].[usr:Calculation_482729626681212929:qk:2]' scope='cols' value='true' />
+            <encoding attr='space' class='0' field='[federated.1kleaut1e76t4s1a1jhmh0wcpchd].[usr:Calculation_482729626684575748:qk:21]' field-type='quantitative' max='1.0' min='0.0' range-type='fixed' reverse='true' scope='rows' type='space' />
+            <format attr='subtitle' class='0' field='[federated.1kleaut1e76t4s1a1jhmh0wcpchd].[usr:Calculation_482729626684575748:qk:21]' scope='rows' value='' />
+            <format attr='auto-subtitle' class='0' field='[federated.1kleaut1e76t4s1a1jhmh0wcpchd].[usr:Calculation_482729626684575748:qk:21]' scope='rows' value='true' />
+            <format attr='display' class='0' field='[federated.1kleaut1e76t4s1a1jhmh0wcpchd].[usr:Calculation_482729626684575748:qk:21]' scope='rows' value='false' />
+            <format attr='display' class='0' field='[federated.1kleaut1e76t4s1a1jhmh0wcpchd].[usr:Calculation_482729626681212929:qk:2]' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <size column='[federated.1kleaut1e76t4s1a1jhmh0wcpchd].[usr:Calculation_482729626686722054:qk:2]' />
+              <lod column='[federated.1kleaut1e76t4s1a1jhmh0wcpchd].[none:ToPad (bin):ok]' />
+              <lod column='[federated.1kleaut1e76t4s1a1jhmh0wcpchd].[none:Source_or_Function:nk]' />
+              <color column='[federated.1kleaut1e76t4s1a1jhmh0wcpchd].[none:Type:nk]' />
+              <path column='[federated.1kleaut1e76t4s1a1jhmh0wcpchd].[none:ToPad (bin):ok]' />
+              <tooltip column='[federated.1kleaut1e76t4s1a1jhmh0wcpchd].[usr:Calculation_482729626681708546:qk]' />
+              <tooltip column='[federated.1kleaut1e76t4s1a1jhmh0wcpchd].[usr:Rank 1 (copy):qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1kleaut1e76t4s1a1jhmh0wcpchd].[usr:Calculation_482729626684575748:qk:21]</rows>
+        <cols>[federated.1kleaut1e76t4s1a1jhmh0wcpchd].[usr:Calculation_482729626681212929:qk:2]</cols>
+        <show-full-range>
+          <column>[federated.1kleaut1e76t4s1a1jhmh0wcpchd].[ToPad (bin)]</column>
+        </show-full-range>
+      </table>
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Dashboard 1'>
+      <style />
+      <size sizing-mode='automatic' />
+      <zones>
+        <zone h='100000' id='2' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='100000' id='5' param='horz' type='layout-flow' w='100000' x='0' y='0'>
+            <zone h='100000' id='3' type='layout-basic' w='99688' x='0' y='0'>
+              <zone h='100000' id='1' name='curves' w='55404' x='19364' y='0' />
+              <zone h='100000' id='7' name='bar sources' show-title='false' w='19364' x='0' y='0' />
+              <zone h='100000' id='9' name='bar type' show-title='false' w='24920' x='74768' y='0' />
+            </zone>
+          </zone>
+        </zone>
+      </zones>
+    </dashboard>
+  </dashboards>
+  <windows source-height='22'>
+    <window class='worksheet' maximized='true' name='curves'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='248'>
+            <card pane-specification-id='0' param='[federated.1kleaut1e76t4s1a1jhmh0wcpchd].[none:Type:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class='worksheet' name='bar sources'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1kleaut1e76t4s1a1jhmh0wcpchd].[none:Source_or_Function:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class='worksheet' name='bar functions'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='277'>
+            <card pane-specification-id='0' param='[federated.1kleaut1e76t4s1a1jhmh0wcpchd].[none:Source_or_Function:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class='worksheet' name='bar source/func'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='276'>
+            <card pane-specification-id='0' param='[federated.1kleaut1e76t4s1a1jhmh0wcpchd].[none:Source_or_Function:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class='worksheet' name='bar type'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='276'>
+            <card pane-specification-id='0' param='[federated.1kleaut1e76t4s1a1jhmh0wcpchd].[none:Type:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class='dashboard' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='bar sources'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='bar type'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='curves'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='9' />
+    </window>
+  </windows>
+</workbook>

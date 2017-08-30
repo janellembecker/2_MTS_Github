@@ -1,0 +1,38 @@
+Navy to Turquoise:
+#15202A ,#20313E ,#2B4354 ,#35566A ,#3F6A81 ,#497F99 ,#5295B1 ,#5AABC9 (1)    ,#62C2E1 ,#69DAF9 
+http://tristen.ca/hcl-picker/#/hlc/10/1.02/15202A/69DAF9
+
+Teal to Turquoise:
+#07272A ,#0F393D ,#174B51 ,#205E66 ,#2A717D ,#358594 ,#409AAC ,#4DAFC5 (2)    ,#5AC4DF ,#69DAF9 
+http://tristen.ca/hcl-picker/#/hlc/10/1.02/07272A/69DAF9
+
+Navy to Lavender:
+#161C27 ,#242B3A ,#343B4F ,#464B64 ,#5A5C7A ,#6F6D91 ,#857EA8 ,#9D8FBF (3)    ,#B7A1D7 ,#D1B2EE 
+http://tristen.ca/hcl-picker/#/hlc/10/1.02/161C27/D1B2EE
+
+Navy to Periwinkle:
+#1B212D ,#273040 ,#344054 ,#415169 ,#4E637F ,#5B7696 ,#6889AD ,#749DC5 (4)    ,#81B1DD ,#8EC6F6 
+http://tristen.ca/hcl-picker/#/hlc/10/1.02/1B212D/8EC6F6
+
+Plum to Turquoise:
+#2E1C28 ,#3E2A3B ,#4D3A50 ,#5B4B66 ,#675D7D ,#707095 ,#7885AD ,#7D9AC4 (5)    ,#80B0DC ,#80C7F2 
+http://tristen.ca/hcl-picker/#/hlc/10/1.02/2E1C28/80C7F2
+
+Teal to Yellow:
+#062A28 ,#0D3F37 ,#195544 ,#2B6B4E ,#428255 ,#5D995A ,#7DAF5D ,#A1C55F (6)    ,#CADA61 ,#F7EE65 
+http://tristen.ca/hcl-picker/#/hlc/10/1.02/062A28/F7EE65
+
+Emerald to Lime:
+#1E3B22 ,#2C4E2C ,#3C6237 ,#4D7741 ,#608D4B ,#75A255 ,#8CB95E ,#A4CF66 (7)    ,#BDE56F ,#D9FC77 
+http://tristen.ca/hcl-picker/#/hlc/10/1.02/1E3B22/D9FC77
+
+Emerald to Turquoise:
+#19321B ,#21452A ,#27593C ,#2C6E50 ,#308366 ,#33997E ,#36B098 ,#39C6B4 (8)    ,#3EDDD3 ,#48F4F3 
+http://tristen.ca/hcl-picker/#/hlc/10/1.02/19321B/48F4F3
+
+Multi-colored:
+#43201A ,#5A2D35 ,#674057 ,#635978 ,#4F7591 ,#31909B ,#34AA92 ,#66BF7D (9)    ,#A6CF65 ,#EED75A 
+http://tristen.ca/hcl-picker/#/hlc/10/1.02/43201A/EED75A
+
+Rust to Yellow:
+#96533D ,#A55F40 ,#B36B43 ,#C07945 ,#CD8647 ,#D8954A ,#E2A44D ,#EBB450 (10)    ,#F2C454 ,#F9D55A

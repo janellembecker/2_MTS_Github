@@ -1,0 +1,2654 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 10300.17.0515.2100                               -->
+<workbook source-build='10.3.0 (10300.17.0515.2100)' source-platform='win' version='10.3' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <repository-location derived-from='https://tableauserver.theinformationlab.co.uk/t/til2/workbooks/5StageSankey?rev=1.0' id='5StageSankey' path='/workbooks' revision='1.0' site='til2' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <style-theme name='clean' />
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='10.3'>
+      <aliases enabled='yes' />
+      <column caption='Choose Year 2' datatype='string' name='[Choose Year 1 (copy)]' param-domain-type='list' role='measure' type='nominal' value='&quot;Exit (No Award)&quot;'>
+        <calculation class='tableau' formula='&quot;Exit (No Award)&quot;' />
+        <members>
+          <member value='&quot;Exit (No Award)&quot;' />
+          <member value='&quot;Exit (With Award)&quot;' />
+          <member value='&quot;Graduating&quot;' />
+          <member value='&quot;Interrupted&quot;' />
+          <member value='&quot;Other/Results Not Known&quot;' />
+          <member value='&quot;Progress Credit Deficit / Go Part Time&quot;' />
+          <member value='&quot;Progress Full Credit&quot;' />
+        </members>
+      </column>
+      <column caption='Choose Year 3' datatype='string' name='[Choose Year 2 (copy)]' param-domain-type='list' role='measure' type='nominal' value='&quot;Exit (No Award)&quot;'>
+        <calculation class='tableau' formula='&quot;Exit (No Award)&quot;' />
+        <members>
+          <member value='&quot;Exit (No Award)&quot;' />
+          <member value='&quot;Exit (With Award)&quot;' />
+          <member value='&quot;Graduating&quot;' />
+          <member value='&quot;Interrupted&quot;' />
+          <member value='&quot;Other/Results Not Known&quot;' />
+          <member value='&quot;Progress Credit Deficit / Go Part Time&quot;' />
+          <member value='&quot;Progress Full Credit&quot;' />
+        </members>
+      </column>
+      <column caption='Choose Year 4' datatype='string' name='[Choose Year 3 (copy)]' param-domain-type='list' role='measure' type='nominal' value='&quot;Exit (No Award)&quot;'>
+        <calculation class='tableau' formula='&quot;Exit (No Award)&quot;' />
+        <members>
+          <member value='&quot;Exit (No Award)&quot;' />
+          <member value='&quot;Exit (With Award)&quot;' />
+          <member value='&quot;Graduating&quot;' />
+          <member value='&quot;Interrupted&quot;' />
+          <member value='&quot;Other/Results Not Known&quot;' />
+          <member value='&quot;Progress Credit Deficit / Go Part Time&quot;' />
+          <member value='&quot;Progress Full Credit&quot;' />
+        </members>
+      </column>
+      <column caption='Top N Step 1' datatype='integer' name='[Parameter 1]' param-domain-type='range' role='measure' type='quantitative' value='1'>
+        <calculation class='tableau' formula='1' />
+        <range granularity='1' max='100' min='1' />
+      </column>
+      <column caption='Choose Year 1' datatype='string' name='[Parameter 2]' param-domain-type='list' role='measure' type='nominal' value='&quot;Exit (No Award)&quot;'>
+        <calculation class='tableau' formula='&quot;Exit (No Award)&quot;' />
+        <members>
+          <member value='&quot;Exit (No Award)&quot;' />
+          <member value='&quot;Exit (With Award)&quot;' />
+          <member value='&quot;Graduating&quot;' />
+          <member value='&quot;Interrupted&quot;' />
+          <member value='&quot;Other/Results Not Known&quot;' />
+          <member value='&quot;Progress Credit Deficit / Go Part Time&quot;' />
+          <member value='&quot;Progress Full Credit&quot;' />
+        </members>
+      </column>
+    </datasource>
+    <datasource caption='5 Stage Sankey v.1 Extract' inline='true' name='dataengine.42312.720178888892' version='10.3'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='5 Stage Sankey v.1 Extract' name='dataengine.42312.720178888892leaf'>
+            <connection class='dataengine' dbname='Data/Sankey/5 Stage Sankey.tde' schema='Extract' server-oauth='' tablename='Extract' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='dataengine.42312.720178888892leaf' name='Extract (Extract.Extract)' table='[Extract].[Extract]' type='table' />
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>RecordID</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[RecordID]</local-name>
+            <parent-name>[Extract (Extract.Extract)]</parent-name>
+            <remote-alias>RecordID</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>44</approx-count>
+            <scale>2</scale>
+            <width>1073741823</width>
+            <contains-null>false</contains-null>
+            <collation flag='0' name='binary' />
+            <statistics>
+              <statistic aggregation='Min' datatype='string'>&quot;000001&quot;</statistic>
+              <statistic aggregation='Max' datatype='string'>&quot;000044&quot;</statistic>
+            </statistics>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;binary&quot;</attribute>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;wstr&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Stage 1</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Stage 1]</local-name>
+            <parent-name>[Extract (Extract.Extract)]</parent-name>
+            <remote-alias>Stage 1</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>4</approx-count>
+            <scale>2</scale>
+            <width>1073741823</width>
+            <contains-null>false</contains-null>
+            <collation flag='0' name='binary' />
+            <statistics>
+              <statistic aggregation='Min' datatype='string'>&quot;Approached&quot;</statistic>
+              <statistic aggregation='Max' datatype='string'>&quot;Rejected&quot;</statistic>
+            </statistics>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;binary&quot;</attribute>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>2</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;wstr&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Stage 2</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Stage 2]</local-name>
+            <parent-name>[Extract (Extract.Extract)]</parent-name>
+            <remote-alias>Stage 2</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>4</approx-count>
+            <scale>2</scale>
+            <width>1073741823</width>
+            <contains-null>false</contains-null>
+            <collation flag='0' name='binary' />
+            <statistics>
+              <statistic aggregation='Min' datatype='string'>&quot;Declined&quot;</statistic>
+              <statistic aggregation='Max' datatype='string'>&quot;Rejected&quot;</statistic>
+            </statistics>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;binary&quot;</attribute>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>3</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;wstr&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Stage 3</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Stage 3]</local-name>
+            <parent-name>[Extract (Extract.Extract)]</parent-name>
+            <remote-alias>Stage 3</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>4</approx-count>
+            <scale>2</scale>
+            <width>1073741823</width>
+            <contains-null>false</contains-null>
+            <collation flag='0' name='binary' />
+            <statistics>
+              <statistic aggregation='Min' datatype='string'>&quot;Declined&quot;</statistic>
+              <statistic aggregation='Max' datatype='string'>&quot;Rejected&quot;</statistic>
+            </statistics>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;binary&quot;</attribute>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>4</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;wstr&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Stage 4</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Stage 4]</local-name>
+            <parent-name>[Extract (Extract.Extract)]</parent-name>
+            <remote-alias>Stage 4</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>4</approx-count>
+            <scale>2</scale>
+            <width>1073741823</width>
+            <contains-null>false</contains-null>
+            <collation flag='0' name='binary' />
+            <statistics>
+              <statistic aggregation='Min' datatype='string'>&quot;Declined&quot;</statistic>
+              <statistic aggregation='Max' datatype='string'>&quot;Rejected&quot;</statistic>
+            </statistics>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;binary&quot;</attribute>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>5</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;wstr&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Stage 5</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Stage 5]</local-name>
+            <parent-name>[Extract (Extract.Extract)]</parent-name>
+            <remote-alias>Stage 5</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>4</approx-count>
+            <scale>2</scale>
+            <width>1073741823</width>
+            <contains-null>false</contains-null>
+            <collation flag='0' name='binary' />
+            <statistics>
+              <statistic aggregation='Min' datatype='string'>&quot;Accepted&quot;</statistic>
+              <statistic aggregation='Max' datatype='string'>&quot;Rejected&quot;</statistic>
+            </statistics>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;binary&quot;</attribute>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>6</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;wstr&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>RowType</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[RowType]</local-name>
+            <parent-name>[Extract (Extract.Extract)]</parent-name>
+            <remote-alias>RowType</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>2</approx-count>
+            <scale>2</scale>
+            <width>1073741823</width>
+            <contains-null>false</contains-null>
+            <collation flag='0' name='binary' />
+            <statistics>
+              <statistic aggregation='Min' datatype='string'>&quot;Dummy&quot;</statistic>
+              <statistic aggregation='Max' datatype='string'>&quot;Real&quot;</statistic>
+            </statistics>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;binary&quot;</attribute>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>0</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;wstr&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>link</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[link]</local-name>
+            <parent-name>[Extract (Extract.Extract)]</parent-name>
+            <remote-alias>link</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>2</scale>
+            <width>1073741823</width>
+            <contains-null>false</contains-null>
+            <collation flag='0' name='binary' />
+            <statistics>
+              <statistic aggregation='Min' datatype='string'>&quot;link&quot;</statistic>
+              <statistic aggregation='Max' datatype='string'>&quot;link&quot;</statistic>
+            </statistics>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;binary&quot;</attribute>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;wstr&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>t</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[t]</local-name>
+            <parent-name>[Extract (Extract.Extract)]</parent-name>
+            <remote-alias>t</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>49</approx-count>
+            <contains-null>false</contains-null>
+            <statistics>
+              <statistic aggregation='Min' datatype='real'>-6.0</statistic>
+              <statistic aggregation='Max' datatype='real'>6.0</statistic>
+            </statistics>
+            <attributes>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>9</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;float&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Path</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[Path]</local-name>
+            <parent-name>[Extract (Extract.Extract)]</parent-name>
+            <remote-alias>Path</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>98</approx-count>
+            <contains-null>false</contains-null>
+            <statistics>
+              <statistic aggregation='Min' datatype='real'>0.0</statistic>
+              <statistic aggregation='Max' datatype='real'>97.0</statistic>
+            </statistics>
+            <attributes>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>10</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;float&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Way of the walk</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Way of the walk]</local-name>
+            <parent-name>[Extract (Extract.Extract)]</parent-name>
+            <remote-alias>Way of the walk</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>2</approx-count>
+            <scale>2</scale>
+            <width>1073741823</width>
+            <contains-null>false</contains-null>
+            <collation flag='0' name='binary' />
+            <statistics>
+              <statistic aggregation='Min' datatype='string'>&quot;Max&quot;</statistic>
+              <statistic aggregation='Max' datatype='string'>&quot;Min&quot;</statistic>
+            </statistics>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;binary&quot;</attribute>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>1</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;wstr&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Record_ID_0</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Record_ID_0]</local-name>
+            <parent-name>[Extract (Extract.Extract)]</parent-name>
+            <remote-alias>Record_ID_0</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>10</approx-count>
+            <scale>2</scale>
+            <width>1073741823</width>
+            <contains-null>false</contains-null>
+            <collation flag='0' name='binary' />
+            <statistics>
+              <statistic aggregation='Min' datatype='string'>&quot;0&quot;</statistic>
+              <statistic aggregation='Max' datatype='string'>&quot;9&quot;</statistic>
+            </statistics>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;binary&quot;</attribute>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>7</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;wstr&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Sigmoid' datatype='real' name='[Calculation_719450041680359425]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='1/(1+EXP(1)^-[t])' />
+      </column>
+      <column caption='Flow Size' datatype='real' default-format='p0%' name='[Calculation_719450041680592898]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNT([RecordID])/Total(count([RecordID]))'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column datatype='string' name='[Stage 1]' role='dimension' type='nominal' />
+      <column datatype='string' name='[Stage 2]' role='dimension' type='nominal' />
+      <column caption='Stage 4-5 Curve Max' datatype='real' name='[Stage 3-4 Curve Max (copy)]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Year 6 Position Max (copy)]+([Stage 4 Position Max  (copy)]-[Year 6 Position Max (copy)])*ATTR([Calculation_719450041680359425])'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Stage 4-5 Curve Min' datatype='real' name='[Stage 3-4 Curve Min (copy)]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Year 6 Position Min (copy)]+([Stage 4 Position Min  (copy)]-[Year 6 Position Min (copy)])*ATTR([Calculation_719450041680359425])'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Stage 4-5 Polygonic' datatype='real' name='[Stage 3-4 Polygonic (copy)]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='CASE ATTR([Way of the walk])&#13;&#10;&#13;&#10;WHEN &apos;Min&apos; THEN [Stage 3-4 Curve Min (copy)]&#13;&#10;WHEN &apos;Max&apos; THEN [Stage 3-4 Curve Max (copy)]&#13;&#10;&#13;&#10;END'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column datatype='string' name='[Stage 3]' role='dimension' type='nominal' />
+      <column caption='Stage 5 Index' datatype='integer' name='[Stage 4 Index (copy)]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='INDEX()'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Stage 5 Position ' datatype='real' name='[Stage 4 Position  (copy)]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Stage 4 Index (copy)]/(SIZE())'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Stage 5 Position Max' datatype='real' name='[Stage 4 Position Max  (copy)]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Stage 4 Position  (copy)] + RUNNING_SUM([Calculation_719450041680592898])'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Stage 5 Position Min' datatype='real' name='[Stage 4 Position Min  (copy)]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Stage 4 Position Max  (copy)]- [Calculation_719450041680592898]'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column datatype='string' name='[Stage 4]' role='dimension' type='nominal' />
+      <column datatype='string' name='[Stage 5]' role='dimension' type='nominal' />
+      <column caption='Stage 1 Bar Position' datatype='real' name='[Year 2 Bar Position  (copy)]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='RUNNING_SUM(1/(SIZE()))+RUNNING_SUM([Calculation_719450041680592898]) - [Calculation_719450041680592898]'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Stage 1 Index' datatype='integer' name='[Year 2 Index  (copy)]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='INDEX()'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Stage 1 Position ' datatype='real' name='[Year 2 Position (copy)]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Year 2 Index  (copy)]/(SIZE())'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Stage 1 Position Max ' datatype='real' name='[Year 2 Position Max (copy)]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Year 2 Position (copy)] + RUNNING_SUM([Calculation_719450041680592898])'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Stage 1 Position Min' datatype='real' name='[Year 2 Position Min (copy)]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Year 2 Position Max (copy)]- [Calculation_719450041680592898]'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Stage 1-2 Curve Max ' datatype='real' name='[Year 2-3 Curve Max (copy)]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Year 2 Position Max (copy)]+([Year 3 Position Max  (copy)]-[Year 2 Position Max (copy)])*ATTR([Calculation_719450041680359425])'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Stage 1-2 Curve Min' datatype='real' name='[Year 2-3 Curve Min (copy)]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Year 2 Position Min (copy)]+([Year 3 Position Min (copy)]-[Year 2 Position Min (copy)])*ATTR([Calculation_719450041680359425])'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Stage 1-2 Polygonic' datatype='real' name='[Year 2-3 Polygonic (copy)]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='CASE ATTR([Way of the walk])&#13;&#10;&#13;&#10;WHEN &apos;Min&apos; THEN [Year 2-3 Curve Min (copy)]&#13;&#10;WHEN &apos;Max&apos; THEN [Year 2-3 Curve Max (copy)]&#13;&#10;&#13;&#10;END'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Stage 2 Bar Position ' datatype='real' name='[Year 3 Bar Position (copy)]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='RUNNING_SUM(1/(SIZE()))+RUNNING_SUM([Calculation_719450041680592898]) - [Calculation_719450041680592898]'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Stage 2 Index ' datatype='integer' name='[Year 3 Index  (copy)]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='INDEX()'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Stage 2 Position' datatype='real' name='[Year 3 Position   (copy)]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Year 3 Index  (copy)]/(SIZE())'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Stage 2 Position Max' datatype='real' name='[Year 3 Position Max  (copy)]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Year 3 Position   (copy)] + RUNNING_SUM([Calculation_719450041680592898])'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Stage 2 Position Min' datatype='real' name='[Year 3 Position Min (copy)]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Year 3 Position Max  (copy)]- [Calculation_719450041680592898]'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Stage 2-3 Curve Max' datatype='real' name='[Year 3-4 Curve Max (copy)]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Year 3 Position Max  (copy)]+([Year 4 Position Max  (copy)]-[Year 3 Position Max  (copy)])*ATTR([Calculation_719450041680359425])'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Stage 2-3 Curve Min' datatype='real' name='[Year 3-4 Curve Min (copy)]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Year 3 Position Min (copy)]+([Year 4 Position Min  (copy)]-[Year 3 Position Min (copy)])*ATTR([Calculation_719450041680359425])'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Stage 2-3 Polygonic' datatype='real' name='[Year 3-4 Polygonic (copy)]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='CASE ATTR([Way of the walk])&#13;&#10;&#13;&#10;WHEN &apos;Min&apos; THEN [Year 3-4 Curve Min (copy)]&#13;&#10;WHEN &apos;Max&apos; THEN [Year 3-4 Curve Max (copy)]&#13;&#10;&#13;&#10;END'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Stage 3 Bar Position' datatype='real' name='[Year 4 Bar Position (copy)]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='RUNNING_SUM(1/(SIZE()))+RUNNING_SUM([Calculation_719450041680592898]) - [Calculation_719450041680592898]'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Stage 3 Index ' datatype='integer' name='[Year 4 Index (copy)]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='INDEX()'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Stage 3 Position  ' datatype='real' name='[Year 4 Position  (copy)]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Year 4 Index (copy)]/(SIZE())'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Stage 3 Position Max ' datatype='real' name='[Year 4 Position Max  (copy)]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Year 4 Position  (copy)] + RUNNING_SUM([Calculation_719450041680592898])'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Stage 3 Position Min' datatype='real' name='[Year 4 Position Min  (copy)]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Year 4 Position Max  (copy)]- [Calculation_719450041680592898]'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Stage 3-4 Curve Max' datatype='real' name='[Year 4-5 Curve Max  (copy)]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Year 4 Position Max  (copy)]+([Year 6 Position Max (copy)]-[Year 4 Position Max  (copy)])*ATTR([Calculation_719450041680359425])'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Stage 3-4 Curve Min' datatype='real' name='[Year 4-5 Curve Min  (copy)]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Year 4 Position Min  (copy)]+([Year 6 Position Min (copy)]-[Year 4 Position Min  (copy)])*ATTR([Calculation_719450041680359425])'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Stage 3-4 Polygonic' datatype='real' name='[Year 4-5 Polygonic  (copy)]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='CASE ATTR([Way of the walk])&#13;&#10;&#13;&#10;WHEN &apos;Min&apos; THEN [Year 4-5 Curve Min  (copy)]&#13;&#10;WHEN &apos;Max&apos; THEN [Year 4-5 Curve Max  (copy)]&#13;&#10;&#13;&#10;END'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Stage 4 Bar Position' datatype='real' name='[Year 6 Bar Position (copy)]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='RUNNING_SUM(1/(SIZE()))+RUNNING_SUM([Calculation_719450041680592898]) - [Calculation_719450041680592898]'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Stage 4 Index' datatype='integer' name='[Year 6 Index (copy)]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='INDEX()'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Stage 4 Position ' datatype='real' name='[Year 6 Position (copy)]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Year 6 Index (copy)]/(SIZE())'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Stage 4 Position Max ' datatype='real' name='[Year 6 Position Max (copy)]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Year 6 Position (copy)] + RUNNING_SUM([Calculation_719450041680592898])'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Stage 4 Position Min ' datatype='real' name='[Year 6 Position Min (copy)]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Year 6 Position Max (copy)]- [Calculation_719450041680592898]'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column-instance column='[Stage 1]' derivation='None' name='[none:Stage 1:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Stage 2]' derivation='None' name='[none:Stage 2:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Stage 3]' derivation='None' name='[none:Stage 3:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Stage 4]' derivation='None' name='[none:Stage 4:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Stage 5]' derivation='None' name='[none:Stage 5:nk]' pivot='key' type='nominal' />
+      <group caption='Action (Country)' hidden='true' name='[Action (Country)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Country]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (Yr_1)' hidden='true' name='[Action (Yr_1)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Stage 1]' />
+        </groupfilter>
+      </group>
+      <layout dim-ordering='alphabetic' dim-percentage='0.280488' measure-ordering='alphabetic' measure-percentage='0.591463' parameter-percentage='0.128049' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Stage 1:nk]' palette='tableau-10' type='palette'>
+            <map to='#1f77b4'>
+              <bucket>&quot;Approached&quot;</bucket>
+            </map>
+            <map to='#5f9ed1'>
+              <bucket>&quot;Proceed&quot;</bucket>
+            </map>
+            <map to='#c85200'>
+              <bucket>&quot;Rejected&quot;</bucket>
+            </map>
+            <map to='#cfcfcf'>
+              <bucket>&quot;No Response&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Stage 2:nk]' palette='tableau-10' type='palette'>
+            <map to='#595959'>
+              <bucket>&quot;Declined&quot;</bucket>
+            </map>
+            <map to='#5f9ed1'>
+              <bucket>&quot;Proceed&quot;</bucket>
+            </map>
+            <map to='#c85200'>
+              <bucket>&quot;Rejected&quot;</bucket>
+            </map>
+            <map to='#cfcfcf'>
+              <bucket>&quot;No Response&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Stage 3:nk]' palette='tableau-10' type='palette'>
+            <map to='#595959'>
+              <bucket>&quot;Declined&quot;</bucket>
+            </map>
+            <map to='#5f9ed1'>
+              <bucket>&quot;Proceed&quot;</bucket>
+            </map>
+            <map to='#c85200'>
+              <bucket>&quot;Rejected&quot;</bucket>
+            </map>
+            <map to='#cfcfcf'>
+              <bucket>&quot;No Response&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Stage 4:nk]' palette='tableau-10' type='palette'>
+            <map to='#595959'>
+              <bucket>&quot;Declined&quot;</bucket>
+            </map>
+            <map to='#5f9ed1'>
+              <bucket>&quot;Proceed&quot;</bucket>
+            </map>
+            <map to='#c85200'>
+              <bucket>&quot;Rejected&quot;</bucket>
+            </map>
+            <map to='#cfcfcf'>
+              <bucket>&quot;No Response&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Stage 5:nk]' palette='tableau-10' type='palette'>
+            <map to='#595959'>
+              <bucket>&quot;Declined&quot;</bucket>
+            </map>
+            <map to='#98d9e4'>
+              <bucket>&quot;Accepted&quot;</bucket>
+            </map>
+            <map to='#c85200'>
+              <bucket>&quot;Rejected&quot;</bucket>
+            </map>
+            <map to='#cfcfcf'>
+              <bucket>&quot;No Response&quot;</bucket>
+            </map>
+            <map to='#ffbc79'>
+              <bucket>&quot;Offer Declined&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Reino Unido&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <actions>
+    <action caption='Highlight1' name='[Action1]'>
+      <activation auto-clear='true' type='on-hover' />
+      <source dashboard='Final Dashboard' type='sheet' />
+      <command command='tsc:brush'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Final Dashboard' />
+      </command>
+    </action>
+    <action caption='Highlight 1 (generated)' name='[Action2]'>
+      <activation auto-clear='true' type='on-select' />
+      <source type='sheet' worksheet='Stage 2 Stacked' />
+      <command command='tsc:brush'>
+        <param name='field-captions' value='Stage 2' />
+        <param name='target' value='Stage 2 Stacked' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Stage 1-2 New'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Æ  </run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location id='Stage1-2New' path='/workbooks/5StageSankey' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='5 Stage Sankey v.1 Extract' name='dataengine.42312.720178888892' />
+          </datasources>
+          <datasource-dependencies datasource='dataengine.42312.720178888892'>
+            <column caption='Sigmoid' datatype='real' name='[Calculation_719450041680359425]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='1/(1+EXP(1)^-[t])' />
+            </column>
+            <column caption='Flow Size' datatype='real' default-format='p0%' name='[Calculation_719450041680592898]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNT([RecordID])/Total(count([RecordID]))'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column datatype='real' name='[Path]' role='measure' type='quantitative' />
+            <column datatype='string' name='[RecordID]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Stage 1]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Stage 2]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Stage 3]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Stage 4]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Stage 5]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Way of the walk]' role='dimension' type='nominal' />
+            <column caption='Stage 1 Index' datatype='integer' name='[Year 2 Index  (copy)]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='INDEX()'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Stage 1 Position ' datatype='real' name='[Year 2 Position (copy)]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Year 2 Index  (copy)]/(SIZE())'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Stage 1 Position Max ' datatype='real' name='[Year 2 Position Max (copy)]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Year 2 Position (copy)] + RUNNING_SUM([Calculation_719450041680592898])'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Stage 1 Position Min' datatype='real' name='[Year 2 Position Min (copy)]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Year 2 Position Max (copy)]- [Calculation_719450041680592898]'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Stage 1-2 Curve Max ' datatype='real' name='[Year 2-3 Curve Max (copy)]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Year 2 Position Max (copy)]+([Year 3 Position Max  (copy)]-[Year 2 Position Max (copy)])*ATTR([Calculation_719450041680359425])'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Stage 1-2 Curve Min' datatype='real' name='[Year 2-3 Curve Min (copy)]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Year 2 Position Min (copy)]+([Year 3 Position Min (copy)]-[Year 2 Position Min (copy)])*ATTR([Calculation_719450041680359425])'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Stage 1-2 Polygonic' datatype='real' name='[Year 2-3 Polygonic (copy)]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='CASE ATTR([Way of the walk])&#13;&#10;&#13;&#10;WHEN &apos;Min&apos; THEN [Year 2-3 Curve Min (copy)]&#13;&#10;WHEN &apos;Max&apos; THEN [Year 2-3 Curve Max (copy)]&#13;&#10;&#13;&#10;END'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Stage 2 Index ' datatype='integer' name='[Year 3 Index  (copy)]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='INDEX()'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Stage 2 Position' datatype='real' name='[Year 3 Position   (copy)]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Year 3 Index  (copy)]/(SIZE())'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Stage 2 Position Max' datatype='real' name='[Year 3 Position Max  (copy)]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Year 3 Position   (copy)] + RUNNING_SUM([Calculation_719450041680592898])'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Stage 2 Position Min' datatype='real' name='[Year 3 Position Min (copy)]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Year 3 Position Max  (copy)]- [Calculation_719450041680592898]'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column-instance column='[Stage 1]' derivation='None' name='[none:Stage 1:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Stage 2]' derivation='None' name='[none:Stage 2:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Stage 3]' derivation='None' name='[none:Stage 3:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Stage 4]' derivation='None' name='[none:Stage 4:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Stage 5]' derivation='None' name='[none:Stage 5:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Way of the walk]' derivation='None' name='[none:Way of the walk:nk]' pivot='key' type='nominal' />
+            <column-instance column='[t]' derivation='None' name='[none:t:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Path]' derivation='Sum' name='[sum:Path:qk]' pivot='key' type='quantitative' />
+            <column datatype='real' name='[t]' role='measure' type='quantitative' />
+            <column-instance column='[Year 2-3 Polygonic (copy)]' derivation='User' name='[usr:Year 2-3 Polygonic (copy):qk:4]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' />
+              <table-calc field='[dataengine.42312.720178888892].[Year 3 Position   (copy)]' level-address='[dataengine.42312.720178888892].[Stage 2]' ordering-type='Field'>
+                <order field='[dataengine.42312.720178888892].[Stage 2]' />
+                <order field='[dataengine.42312.720178888892].[Stage 5]' />
+                <order field='[dataengine.42312.720178888892].[Stage 4]' />
+                <order field='[dataengine.42312.720178888892].[Stage 3]' />
+                <order field='[dataengine.42312.720178888892].[Stage 1]' />
+              </table-calc>
+              <table-calc field='[dataengine.42312.720178888892].[Year 2 Position Min (copy)]' ordering-type='Rows' />
+              <table-calc field='[dataengine.42312.720178888892].[Calculation_719450041680592898]' ordering-type='Field'>
+                <order field='[dataengine.42312.720178888892].[Stage 1]' />
+                <order field='[dataengine.42312.720178888892].[Stage 2]' />
+                <order field='[dataengine.42312.720178888892].[Stage 3]' />
+                <order field='[dataengine.42312.720178888892].[Stage 4]' />
+                <order field='[dataengine.42312.720178888892].[Stage 5]' />
+              </table-calc>
+              <table-calc field='[dataengine.42312.720178888892].[Year 3 Position Min (copy)]' ordering-type='Rows' />
+              <table-calc field='[dataengine.42312.720178888892].[Year 2 Position (copy)]' level-address='[dataengine.42312.720178888892].[Stage 1]' ordering-type='Field'>
+                <order field='[dataengine.42312.720178888892].[Stage 1]' />
+                <order field='[dataengine.42312.720178888892].[Stage 2]' />
+                <order field='[dataengine.42312.720178888892].[Stage 3]' />
+                <order field='[dataengine.42312.720178888892].[Stage 4]' />
+                <order field='[dataengine.42312.720178888892].[Stage 5]' />
+              </table-calc>
+              <table-calc field='[dataengine.42312.720178888892].[Year 2 Index  (copy)]' level-address='[dataengine.42312.720178888892].[Stage 1]' ordering-type='Field'>
+                <order field='[dataengine.42312.720178888892].[Stage 1]' />
+                <order field='[dataengine.42312.720178888892].[Stage 2]' />
+                <order field='[dataengine.42312.720178888892].[Stage 3]' />
+                <order field='[dataengine.42312.720178888892].[Stage 4]' />
+                <order field='[dataengine.42312.720178888892].[Stage 5]' />
+              </table-calc>
+              <table-calc field='[dataengine.42312.720178888892].[Year 3 Position Max  (copy)]' ordering-type='Field'>
+                <order field='[dataengine.42312.720178888892].[Stage 2]' />
+                <order field='[dataengine.42312.720178888892].[Stage 1]' />
+                <order field='[dataengine.42312.720178888892].[Stage 3]' />
+                <order field='[dataengine.42312.720178888892].[Stage 4]' />
+                <order field='[dataengine.42312.720178888892].[Stage 5]' />
+              </table-calc>
+              <table-calc field='[dataengine.42312.720178888892].[Year 2 Position Max (copy)]' ordering-type='Field'>
+                <order field='[dataengine.42312.720178888892].[Stage 1]' />
+                <order field='[dataengine.42312.720178888892].[Stage 2]' />
+                <order field='[dataengine.42312.720178888892].[Stage 3]' />
+                <order field='[dataengine.42312.720178888892].[Stage 4]' />
+                <order field='[dataengine.42312.720178888892].[Stage 5]' />
+              </table-calc>
+              <table-calc field='[dataengine.42312.720178888892].[Year 2-3 Curve Min (copy)]' ordering-type='Rows' />
+              <table-calc field='[dataengine.42312.720178888892].[Year 3 Index  (copy)]' level-address='[dataengine.42312.720178888892].[Stage 2]' ordering-type='Field'>
+                <order field='[dataengine.42312.720178888892].[Stage 2]' />
+                <order field='[dataengine.42312.720178888892].[Stage 5]' />
+                <order field='[dataengine.42312.720178888892].[Stage 4]' />
+                <order field='[dataengine.42312.720178888892].[Stage 3]' />
+                <order field='[dataengine.42312.720178888892].[Stage 1]' />
+              </table-calc>
+              <table-calc field='[dataengine.42312.720178888892].[Year 2-3 Curve Max (copy)]' ordering-type='Rows' />
+            </column-instance>
+          </datasource-dependencies>
+          <sort class='manual' column='[dataengine.42312.720178888892].[none:Stage 1:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Proceed&quot;</bucket>
+              <bucket>&quot;Approached&quot;</bucket>
+              <bucket>&quot;Rejected&quot;</bucket>
+              <bucket>&quot;No Response&quot;</bucket>
+            </dictionary>
+          </sort>
+          <sort class='manual' column='[dataengine.42312.720178888892].[none:Stage 2:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Proceed&quot;</bucket>
+              <bucket>&quot;Declined&quot;</bucket>
+              <bucket>&quot;Rejected&quot;</bucket>
+              <bucket>&quot;No Response&quot;</bucket>
+            </dictionary>
+          </sort>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[dataengine.42312.720178888892].[none:t:qk]' scope='cols' value='false' />
+            <encoding attr='space' class='0' field='[dataengine.42312.720178888892].[none:t:qk]' field-type='quantitative' max='6.0' min='-6.0' range-type='fixed' scope='cols' type='space' />
+            <format attr='subtitle' class='0' field='[dataengine.42312.720178888892].[none:t:qk]' scope='cols' value='' />
+            <format attr='auto-subtitle' class='0' field='[dataengine.42312.720178888892].[none:t:qk]' scope='cols' value='true' />
+            <format attr='display' class='0' field='[dataengine.42312.720178888892].[usr:Year 2-3 Polygonic (copy):qk:4]' scope='rows' value='false' />
+            <encoding attr='space' class='0' domain-expand='false' field='[dataengine.42312.720178888892].[usr:Year 2-3 Polygonic (copy):qk:4]' field-type='quantitative' max='2.0874999999999999' min='0.16249999999999998' range-type='fixed' reverse='true' scope='rows' type='space' />
+            <format attr='subtitle' class='0' field='[dataengine.42312.720178888892].[usr:Year 2-3 Polygonic (copy):qk:4]' scope='rows' value='' />
+            <format attr='auto-subtitle' class='0' field='[dataengine.42312.720178888892].[usr:Year 2-3 Polygonic (copy):qk:4]' scope='rows' value='true' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-style' data-class='total' scope='rows' value='none' />
+            <format attr='border-style' data-class='total' scope='cols' value='none' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-style' data-class='total' scope='rows' value='none' />
+            <format attr='border-style' data-class='total' scope='cols' value='none' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='line-visibility' scope='rows' value='off' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='header-div'>
+            <format attr='stroke-color' scope='rows' value='#ffffff' />
+            <format attr='line-pattern-only' scope='rows' value='solid' />
+            <format attr='line-visibility' scope='rows' value='on' />
+          </style-rule>
+          <style-rule element='legend'>
+            <format attr='font-family' value='Courier New' />
+            <format attr='font-size' value='8' />
+          </style-rule>
+          <style-rule element='legend-title'>
+            <format attr='font-family' value='Courier New' />
+            <format attr='font-size' value='8' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-disallow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Polygon' />
+            <encodings>
+              <lod column='[dataengine.42312.720178888892].[none:Stage 1:nk]' />
+              <lod column='[dataengine.42312.720178888892].[none:Stage 2:nk]' />
+              <lod column='[dataengine.42312.720178888892].[none:Stage 3:nk]' />
+              <lod column='[dataengine.42312.720178888892].[none:Stage 4:nk]' />
+              <color column='[dataengine.42312.720178888892].[none:Stage 5:nk]' />
+              <lod column='[dataengine.42312.720178888892].[none:Way of the walk:nk]' />
+              <path column='[dataengine.42312.720178888892].[sum:Path:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='cell'>
+                <format attr='vertical-align' value='center' />
+                <format attr='text-align' value='center' />
+                <format attr='wrap' value='on' />
+                <format attr='text-orientation' value='0' />
+              </style-rule>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='auto' />
+                <format attr='font-size' value='20' />
+                <format attr='font-family' value='Georgia' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[dataengine.42312.720178888892].[usr:Year 2-3 Polygonic (copy):qk:4]</rows>
+        <cols>[dataengine.42312.720178888892].[none:t:qk]</cols>
+        <tooltip-style tooltip-mode='none' />
+      </table>
+    </worksheet>
+    <worksheet name='Stage 2 Stacked'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#000000' fontname='Courier New' fontsize='9'>Viewed Course</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location id='Stage2Stacked' path='/workbooks/5StageSankey' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='5 Stage Sankey v.1 Extract' name='dataengine.42312.720178888892' />
+          </datasources>
+          <datasource-dependencies datasource='dataengine.42312.720178888892'>
+            <column caption='Flow Size' datatype='real' default-format='p0%' name='[Calculation_719450041680592898]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNT([RecordID])/Total(count([RecordID]))'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column datatype='string' name='[RecordID]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Stage 2]' role='dimension' type='nominal' />
+            <column caption='Stage 2 Bar Position ' datatype='real' name='[Year 3 Bar Position (copy)]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='RUNNING_SUM(1/(SIZE()))+RUNNING_SUM([Calculation_719450041680592898]) - [Calculation_719450041680592898]'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column-instance column='[Stage 2]' derivation='None' name='[none:Stage 2:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_719450041680592898]' derivation='User' name='[usr:Calculation_719450041680592898:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' />
+            </column-instance>
+            <column-instance column='[Year 3 Bar Position (copy)]' derivation='User' name='[usr:Year 3 Bar Position (copy):qk:6]' pivot='key' type='quantitative'>
+              <table-calc ordering-field='[dataengine.42312.720178888892].[Stage 2]' ordering-type='Field' />
+              <table-calc field='[dataengine.42312.720178888892].[Calculation_719450041680592898]' ordering-field='[dataengine.42312.720178888892].[Stage 2]' ordering-type='Field' />
+            </column-instance>
+          </datasource-dependencies>
+          <sort class='manual' column='[dataengine.42312.720178888892].[none:Stage 2:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Proceed&quot;</bucket>
+              <bucket>&quot;Declined&quot;</bucket>
+              <bucket>&quot;Rejected&quot;</bucket>
+              <bucket>&quot;No Response&quot;</bucket>
+            </dictionary>
+          </sort>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[dataengine.42312.720178888892].[usr:Year 3 Bar Position (copy):qk:6]' scope='rows' value='false' />
+            <format attr='subtitle' class='0' field='[dataengine.42312.720178888892].[usr:Year 3 Bar Position (copy):qk:6]' scope='rows' value='' />
+            <format attr='auto-subtitle' class='0' field='[dataengine.42312.720178888892].[usr:Year 3 Bar Position (copy):qk:6]' scope='rows' value='true' />
+            <encoding attr='space' class='0' domain-expand='false' field='[dataengine.42312.720178888892].[usr:Year 3 Bar Position (copy):qk:6]' field-type='quantitative' max='2.0874999999999999' min='0.16249999999999992' range-type='fixed' reverse='true' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' value='85' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-style' data-class='total' scope='rows' value='none' />
+            <format attr='border-style' data-class='total' scope='cols' value='none' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-style' data-class='total' scope='rows' value='none' />
+            <format attr='border-style' data-class='total' scope='cols' value='none' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='line-visibility' scope='rows' value='off' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='header-div'>
+            <format attr='stroke-color' scope='rows' value='#ffffff' />
+            <format attr='line-pattern-only' scope='rows' value='solid' />
+            <format attr='line-visibility' scope='rows' value='on' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-disallow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='GanttBar' />
+            <encodings>
+              <color column='[dataengine.42312.720178888892].[none:Stage 2:nk]' />
+              <size column='[dataengine.42312.720178888892].[usr:Calculation_719450041680592898:qk]' />
+              <text column='[dataengine.42312.720178888892].[none:Stage 2:nk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run bold='true' fontname='Gill Sans MT'>Stage 2</run>
+                <run fontname='Gill Sans MT'>&#10;&lt;[dataengine.42312.720178888892].[usr:Calculation_719450041680592898:qk]&gt; of job applications </run>
+                <run fontname='Gill Sans MT'>.</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='cell'>
+                <format attr='wrap' value='on' />
+                <format attr='text-orientation' value='0' />
+                <format attr='vertical-align' value='center' />
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='auto' />
+                <format attr='font-family' value='Gill Sans MT' />
+                <format attr='font-size' value='6' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='size' value='1.9890055656433105' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-color' value='#898989' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[dataengine.42312.720178888892].[usr:Year 3 Bar Position (copy):qk:6]</rows>
+        <cols />
+      </table>
+    </worksheet>
+    <worksheet name='Stage 2-3 New'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Æ  </run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location id='Stage2-3New' path='/workbooks/5StageSankey' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='5 Stage Sankey v.1 Extract' name='dataengine.42312.720178888892' />
+          </datasources>
+          <datasource-dependencies datasource='dataengine.42312.720178888892'>
+            <column caption='Sigmoid' datatype='real' name='[Calculation_719450041680359425]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='1/(1+EXP(1)^-[t])' />
+            </column>
+            <column caption='Flow Size' datatype='real' default-format='p0%' name='[Calculation_719450041680592898]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNT([RecordID])/Total(count([RecordID]))'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column datatype='real' name='[Path]' role='measure' type='quantitative' />
+            <column datatype='string' name='[RecordID]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Stage 1]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Stage 2]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Stage 3]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Stage 4]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Stage 5]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Way of the walk]' role='dimension' type='nominal' />
+            <column caption='Stage 2 Index ' datatype='integer' name='[Year 3 Index  (copy)]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='INDEX()'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Stage 2 Position' datatype='real' name='[Year 3 Position   (copy)]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Year 3 Index  (copy)]/(SIZE())'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Stage 2 Position Max' datatype='real' name='[Year 3 Position Max  (copy)]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Year 3 Position   (copy)] + RUNNING_SUM([Calculation_719450041680592898])'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Stage 2 Position Min' datatype='real' name='[Year 3 Position Min (copy)]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Year 3 Position Max  (copy)]- [Calculation_719450041680592898]'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Stage 2-3 Curve Max' datatype='real' name='[Year 3-4 Curve Max (copy)]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Year 3 Position Max  (copy)]+([Year 4 Position Max  (copy)]-[Year 3 Position Max  (copy)])*ATTR([Calculation_719450041680359425])'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Stage 2-3 Curve Min' datatype='real' name='[Year 3-4 Curve Min (copy)]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Year 3 Position Min (copy)]+([Year 4 Position Min  (copy)]-[Year 3 Position Min (copy)])*ATTR([Calculation_719450041680359425])'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Stage 2-3 Polygonic' datatype='real' name='[Year 3-4 Polygonic (copy)]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='CASE ATTR([Way of the walk])&#13;&#10;&#13;&#10;WHEN &apos;Min&apos; THEN [Year 3-4 Curve Min (copy)]&#13;&#10;WHEN &apos;Max&apos; THEN [Year 3-4 Curve Max (copy)]&#13;&#10;&#13;&#10;END'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Stage 3 Index ' datatype='integer' name='[Year 4 Index (copy)]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='INDEX()'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Stage 3 Position  ' datatype='real' name='[Year 4 Position  (copy)]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Year 4 Index (copy)]/(SIZE())'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Stage 3 Position Max ' datatype='real' name='[Year 4 Position Max  (copy)]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Year 4 Position  (copy)] + RUNNING_SUM([Calculation_719450041680592898])'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Stage 3 Position Min' datatype='real' name='[Year 4 Position Min  (copy)]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Year 4 Position Max  (copy)]- [Calculation_719450041680592898]'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column-instance column='[Stage 1]' derivation='None' name='[none:Stage 1:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Stage 2]' derivation='None' name='[none:Stage 2:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Stage 3]' derivation='None' name='[none:Stage 3:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Stage 4]' derivation='None' name='[none:Stage 4:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Stage 5]' derivation='None' name='[none:Stage 5:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Way of the walk]' derivation='None' name='[none:Way of the walk:nk]' pivot='key' type='nominal' />
+            <column-instance column='[t]' derivation='None' name='[none:t:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Path]' derivation='Sum' name='[sum:Path:qk]' pivot='key' type='quantitative' />
+            <column datatype='real' name='[t]' role='measure' type='quantitative' />
+            <column-instance column='[Year 3-4 Polygonic (copy)]' derivation='User' name='[usr:Year 3-4 Polygonic (copy):qk:62]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' />
+              <table-calc field='[dataengine.42312.720178888892].[Year 3 Position   (copy)]' level-address='[dataengine.42312.720178888892].[Stage 2]' ordering-type='Field'>
+                <order field='[dataengine.42312.720178888892].[Stage 2]' />
+                <order field='[dataengine.42312.720178888892].[Stage 1]' />
+                <order field='[dataengine.42312.720178888892].[Stage 3]' />
+                <order field='[dataengine.42312.720178888892].[Stage 4]' />
+                <order field='[dataengine.42312.720178888892].[Stage 5]' />
+              </table-calc>
+              <table-calc field='[dataengine.42312.720178888892].[Year 4 Position Max  (copy)]' ordering-type='Field'>
+                <order field='[dataengine.42312.720178888892].[Stage 3]' />
+                <order field='[dataengine.42312.720178888892].[Stage 1]' />
+                <order field='[dataengine.42312.720178888892].[Stage 2]' />
+                <order field='[dataengine.42312.720178888892].[Stage 4]' />
+                <order field='[dataengine.42312.720178888892].[Stage 5]' />
+              </table-calc>
+              <table-calc field='[dataengine.42312.720178888892].[Year 4 Position  (copy)]' level-address='[dataengine.42312.720178888892].[Stage 3]' ordering-type='Field'>
+                <order field='[dataengine.42312.720178888892].[Stage 3]' />
+                <order field='[dataengine.42312.720178888892].[Stage 5]' />
+                <order field='[dataengine.42312.720178888892].[Stage 4]' />
+                <order field='[dataengine.42312.720178888892].[Stage 2]' />
+                <order field='[dataengine.42312.720178888892].[Stage 1]' />
+              </table-calc>
+              <table-calc field='[dataengine.42312.720178888892].[Year 3-4 Curve Min (copy)]' ordering-type='Rows' />
+              <table-calc field='[dataengine.42312.720178888892].[Year 3 Position Max  (copy)]' ordering-type='Field'>
+                <order field='[dataengine.42312.720178888892].[Stage 2]' />
+                <order field='[dataengine.42312.720178888892].[Stage 1]' />
+                <order field='[dataengine.42312.720178888892].[Stage 3]' />
+                <order field='[dataengine.42312.720178888892].[Stage 4]' />
+                <order field='[dataengine.42312.720178888892].[Stage 5]' />
+              </table-calc>
+              <table-calc field='[dataengine.42312.720178888892].[Year 3 Index  (copy)]' level-address='[dataengine.42312.720178888892].[Stage 2]' ordering-type='Field'>
+                <order field='[dataengine.42312.720178888892].[Stage 2]' />
+                <order field='[dataengine.42312.720178888892].[Stage 1]' />
+                <order field='[dataengine.42312.720178888892].[Stage 3]' />
+                <order field='[dataengine.42312.720178888892].[Stage 4]' />
+                <order field='[dataengine.42312.720178888892].[Stage 5]' />
+              </table-calc>
+              <table-calc field='[dataengine.42312.720178888892].[Calculation_719450041680592898]' ordering-type='Field'>
+                <order field='[dataengine.42312.720178888892].[Stage 2]' />
+                <order field='[dataengine.42312.720178888892].[Stage 1]' />
+                <order field='[dataengine.42312.720178888892].[Stage 3]' />
+                <order field='[dataengine.42312.720178888892].[Stage 4]' />
+                <order field='[dataengine.42312.720178888892].[Stage 5]' />
+              </table-calc>
+              <table-calc field='[dataengine.42312.720178888892].[Year 3 Position Min (copy)]' ordering-type='Rows' />
+              <table-calc field='[dataengine.42312.720178888892].[Year 4 Position Min  (copy)]' ordering-type='Rows' />
+              <table-calc field='[dataengine.42312.720178888892].[Year 4 Index (copy)]' level-address='[dataengine.42312.720178888892].[Stage 3]' ordering-type='Field'>
+                <order field='[dataengine.42312.720178888892].[Stage 3]' />
+                <order field='[dataengine.42312.720178888892].[Stage 5]' />
+                <order field='[dataengine.42312.720178888892].[Stage 4]' />
+                <order field='[dataengine.42312.720178888892].[Stage 2]' />
+                <order field='[dataengine.42312.720178888892].[Stage 1]' />
+              </table-calc>
+              <table-calc field='[dataengine.42312.720178888892].[Year 3-4 Curve Max (copy)]' ordering-type='Rows' />
+            </column-instance>
+          </datasource-dependencies>
+          <sort class='manual' column='[dataengine.42312.720178888892].[none:Stage 2:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Proceed&quot;</bucket>
+              <bucket>&quot;Declined&quot;</bucket>
+              <bucket>&quot;Rejected&quot;</bucket>
+              <bucket>&quot;No Response&quot;</bucket>
+            </dictionary>
+          </sort>
+          <sort class='manual' column='[dataengine.42312.720178888892].[none:Stage 3:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Proceed&quot;</bucket>
+              <bucket>&quot;Declined&quot;</bucket>
+              <bucket>&quot;Rejected&quot;</bucket>
+              <bucket>&quot;No Response&quot;</bucket>
+            </dictionary>
+          </sort>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[dataengine.42312.720178888892].[none:t:qk]' scope='cols' value='false' />
+            <encoding attr='space' class='0' field='[dataengine.42312.720178888892].[none:t:qk]' field-type='quantitative' max='6.0' min='-6.0' range-type='fixed' scope='cols' type='space' />
+            <format attr='subtitle' class='0' field='[dataengine.42312.720178888892].[none:t:qk]' scope='cols' value='' />
+            <format attr='auto-subtitle' class='0' field='[dataengine.42312.720178888892].[none:t:qk]' scope='cols' value='true' />
+            <format attr='display' class='0' field='[dataengine.42312.720178888892].[usr:Year 3-4 Polygonic (copy):qk:62]' scope='rows' value='false' />
+            <format attr='subtitle' class='0' field='[dataengine.42312.720178888892].[usr:Year 3-4 Polygonic (copy):qk:62]' scope='rows' value='' />
+            <format attr='auto-subtitle' class='0' field='[dataengine.42312.720178888892].[usr:Year 3-4 Polygonic (copy):qk:62]' scope='rows' value='true' />
+            <encoding attr='space' class='0' domain-expand='false' field='[dataengine.42312.720178888892].[usr:Year 3-4 Polygonic (copy):qk:62]' field-type='quantitative' max='2.0874915706028752' min='0.1626770173396227' range-type='fixed' reverse='true' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-style' data-class='total' scope='rows' value='none' />
+            <format attr='border-style' data-class='total' scope='cols' value='none' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-style' data-class='total' scope='rows' value='none' />
+            <format attr='border-style' data-class='total' scope='cols' value='none' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='line-visibility' scope='rows' value='off' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='header-div'>
+            <format attr='stroke-color' scope='rows' value='#ffffff' />
+            <format attr='line-pattern-only' scope='rows' value='solid' />
+            <format attr='line-visibility' scope='rows' value='on' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-disallow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Polygon' />
+            <encodings>
+              <lod column='[dataengine.42312.720178888892].[none:Stage 1:nk]' />
+              <lod column='[dataengine.42312.720178888892].[none:Stage 2:nk]' />
+              <lod column='[dataengine.42312.720178888892].[none:Stage 3:nk]' />
+              <lod column='[dataengine.42312.720178888892].[none:Stage 4:nk]' />
+              <color column='[dataengine.42312.720178888892].[none:Stage 5:nk]' />
+              <lod column='[dataengine.42312.720178888892].[none:Way of the walk:nk]' />
+              <path column='[dataengine.42312.720178888892].[sum:Path:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='cell'>
+                <format attr='vertical-align' value='center' />
+                <format attr='text-align' value='center' />
+                <format attr='wrap' value='on' />
+                <format attr='text-orientation' value='0' />
+              </style-rule>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='auto' />
+                <format attr='font-size' value='20' />
+                <format attr='font-family' value='Georgia' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[dataengine.42312.720178888892].[usr:Year 3-4 Polygonic (copy):qk:62]</rows>
+        <cols>[dataengine.42312.720178888892].[none:t:qk]</cols>
+        <tooltip-style tooltip-mode='none' />
+      </table>
+    </worksheet>
+    <worksheet name='Stage 3 Stacked'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#000000' fontname='Courier New' fontsize='8'>Explored</run>
+          </formatted-text>
+        </title>
+        <caption>
+          <formatted-text />
+        </caption>
+      </layout-options>
+      <repository-location id='Stage3Stacked' path='/workbooks/5StageSankey' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='5 Stage Sankey v.1 Extract' name='dataengine.42312.720178888892' />
+          </datasources>
+          <datasource-dependencies datasource='dataengine.42312.720178888892'>
+            <column caption='Flow Size' datatype='real' default-format='p0%' name='[Calculation_719450041680592898]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNT([RecordID])/Total(count([RecordID]))'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column datatype='string' name='[RecordID]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Stage 3]' role='dimension' type='nominal' />
+            <column caption='Stage 3 Bar Position' datatype='real' name='[Year 4 Bar Position (copy)]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='RUNNING_SUM(1/(SIZE()))+RUNNING_SUM([Calculation_719450041680592898]) - [Calculation_719450041680592898]'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column-instance column='[Stage 3]' derivation='None' name='[none:Stage 3:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_719450041680592898]' derivation='User' name='[usr:Calculation_719450041680592898:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' />
+            </column-instance>
+            <column-instance column='[Year 4 Bar Position (copy)]' derivation='User' name='[usr:Year 4 Bar Position (copy):qk:4]' pivot='key' type='quantitative'>
+              <table-calc ordering-field='[dataengine.42312.720178888892].[Stage 3]' ordering-type='Field' />
+              <table-calc field='[dataengine.42312.720178888892].[Calculation_719450041680592898]' ordering-field='[dataengine.42312.720178888892].[Stage 3]' ordering-type='Field' />
+            </column-instance>
+          </datasource-dependencies>
+          <sort class='manual' column='[dataengine.42312.720178888892].[none:Stage 3:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Exit (No Award)&quot;</bucket>
+              <bucket>&quot;Exit (With Award)&quot;</bucket>
+              <bucket>&quot;Graduating&quot;</bucket>
+              <bucket>&quot;Interrupted&quot;</bucket>
+              <bucket>&quot;Other/Results Not Known&quot;</bucket>
+              <bucket>&quot;Progress Credit Deficit / Go Part Time&quot;</bucket>
+              <bucket>&quot;Progress Full Credit&quot;</bucket>
+              <bucket>&quot;Proceed&quot;</bucket>
+              <bucket>&quot;Declined&quot;</bucket>
+              <bucket>&quot;Rejected&quot;</bucket>
+              <bucket>&quot;No Response&quot;</bucket>
+            </dictionary>
+          </sort>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[dataengine.42312.720178888892].[usr:Year 4 Bar Position (copy):qk:4]' scope='rows' value='false' />
+            <encoding attr='space' class='0' domain-expand='false' field='[dataengine.42312.720178888892].[usr:Year 4 Bar Position (copy):qk:4]' field-type='quantitative' max='2.0874999999999999' min='0.16249999999999998' range-type='fixed' reverse='true' scope='rows' type='space' />
+            <format attr='subtitle' class='0' field='[dataengine.42312.720178888892].[usr:Year 4 Bar Position (copy):qk:4]' scope='rows' value='' />
+            <format attr='auto-subtitle' class='0' field='[dataengine.42312.720178888892].[usr:Year 4 Bar Position (copy):qk:4]' scope='rows' value='true' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' value='239' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-style' data-class='total' scope='rows' value='none' />
+            <format attr='border-style' data-class='total' scope='cols' value='none' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-style' data-class='total' scope='rows' value='none' />
+            <format attr='border-style' data-class='total' scope='cols' value='none' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='line-visibility' scope='rows' value='off' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='header-div'>
+            <format attr='stroke-color' scope='rows' value='#ffffff' />
+            <format attr='line-pattern-only' scope='rows' value='solid' />
+            <format attr='line-visibility' scope='rows' value='on' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-disallow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='GanttBar' />
+            <encodings>
+              <color column='[dataengine.42312.720178888892].[none:Stage 3:nk]' />
+              <size column='[dataengine.42312.720178888892].[usr:Calculation_719450041680592898:qk]' />
+              <text column='[dataengine.42312.720178888892].[none:Stage 3:nk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run bold='true' fontname='Gill Sans MT'>Stage 2</run>
+                <run fontname='Gill Sans MT'>&#10;&lt;[dataengine.42312.720178888892].[usr:Calculation_719450041680592898:qk]&gt; of job applications </run>
+                <run fontname='Gill Sans MT'>.</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='cell'>
+                <format attr='wrap' value='on' />
+                <format attr='text-orientation' value='0' />
+                <format attr='vertical-align' value='center' />
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='auto' />
+                <format attr='font-family' value='Gill Sans MT' />
+                <format attr='font-size' value='6' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='size' value='1.9890055656433105' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-color' value='#898989' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[dataengine.42312.720178888892].[usr:Year 4 Bar Position (copy):qk:4]</rows>
+        <cols />
+      </table>
+    </worksheet>
+    <worksheet name='Stage 3-4 New'>
+      <repository-location id='Stage3-4New' path='/workbooks/5StageSankey' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='5 Stage Sankey v.1 Extract' name='dataengine.42312.720178888892' />
+          </datasources>
+          <datasource-dependencies datasource='dataengine.42312.720178888892'>
+            <column caption='Sigmoid' datatype='real' name='[Calculation_719450041680359425]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='1/(1+EXP(1)^-[t])' />
+            </column>
+            <column caption='Flow Size' datatype='real' default-format='p0%' name='[Calculation_719450041680592898]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNT([RecordID])/Total(count([RecordID]))'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column datatype='real' name='[Path]' role='measure' type='quantitative' />
+            <column datatype='string' name='[RecordID]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Stage 1]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Stage 2]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Stage 3]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Stage 4]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Stage 5]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Way of the walk]' role='dimension' type='nominal' />
+            <column caption='Stage 3 Index ' datatype='integer' name='[Year 4 Index (copy)]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='INDEX()'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Stage 3 Position  ' datatype='real' name='[Year 4 Position  (copy)]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Year 4 Index (copy)]/(SIZE())'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Stage 3 Position Max ' datatype='real' name='[Year 4 Position Max  (copy)]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Year 4 Position  (copy)] + RUNNING_SUM([Calculation_719450041680592898])'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Stage 3 Position Min' datatype='real' name='[Year 4 Position Min  (copy)]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Year 4 Position Max  (copy)]- [Calculation_719450041680592898]'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Stage 3-4 Curve Max' datatype='real' name='[Year 4-5 Curve Max  (copy)]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Year 4 Position Max  (copy)]+([Year 6 Position Max (copy)]-[Year 4 Position Max  (copy)])*ATTR([Calculation_719450041680359425])'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Stage 3-4 Curve Min' datatype='real' name='[Year 4-5 Curve Min  (copy)]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Year 4 Position Min  (copy)]+([Year 6 Position Min (copy)]-[Year 4 Position Min  (copy)])*ATTR([Calculation_719450041680359425])'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Stage 3-4 Polygonic' datatype='real' name='[Year 4-5 Polygonic  (copy)]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='CASE ATTR([Way of the walk])&#13;&#10;&#13;&#10;WHEN &apos;Min&apos; THEN [Year 4-5 Curve Min  (copy)]&#13;&#10;WHEN &apos;Max&apos; THEN [Year 4-5 Curve Max  (copy)]&#13;&#10;&#13;&#10;END'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Stage 4 Index' datatype='integer' name='[Year 6 Index (copy)]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='INDEX()'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Stage 4 Position ' datatype='real' name='[Year 6 Position (copy)]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Year 6 Index (copy)]/(SIZE())'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Stage 4 Position Max ' datatype='real' name='[Year 6 Position Max (copy)]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Year 6 Position (copy)] + RUNNING_SUM([Calculation_719450041680592898])'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Stage 4 Position Min ' datatype='real' name='[Year 6 Position Min (copy)]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Year 6 Position Max (copy)]- [Calculation_719450041680592898]'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column-instance column='[Stage 1]' derivation='None' name='[none:Stage 1:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Stage 2]' derivation='None' name='[none:Stage 2:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Stage 3]' derivation='None' name='[none:Stage 3:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Stage 4]' derivation='None' name='[none:Stage 4:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Stage 5]' derivation='None' name='[none:Stage 5:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Way of the walk]' derivation='None' name='[none:Way of the walk:nk]' pivot='key' type='nominal' />
+            <column-instance column='[t]' derivation='None' name='[none:t:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Path]' derivation='Sum' name='[sum:Path:qk]' pivot='key' type='quantitative' />
+            <column datatype='real' name='[t]' role='measure' type='quantitative' />
+            <column-instance column='[Year 4-5 Polygonic  (copy)]' derivation='User' name='[usr:Year 4-5 Polygonic  (copy):qk:2]' pivot='key' type='quantitative'>
+              <table-calc ordering-field='[dataengine.42312.720178888892].[Stage 2]' ordering-type='Field' />
+              <table-calc field='[dataengine.42312.720178888892].[Year 4-5 Curve Min  (copy)]' ordering-field='[dataengine.42312.720178888892].[Stage 2]' ordering-type='Field' />
+              <table-calc field='[dataengine.42312.720178888892].[Year 6 Index (copy)]' level-address='[dataengine.42312.720178888892].[Stage 4]' ordering-type='Field'>
+                <order field='[dataengine.42312.720178888892].[Stage 4]' />
+                <order field='[dataengine.42312.720178888892].[Stage 5]' />
+                <order field='[dataengine.42312.720178888892].[Stage 3]' />
+                <order field='[dataengine.42312.720178888892].[Stage 2]' />
+                <order field='[dataengine.42312.720178888892].[Stage 1]' />
+              </table-calc>
+              <table-calc field='[dataengine.42312.720178888892].[Year 6 Position Min (copy)]' ordering-field='[dataengine.42312.720178888892].[Stage 2]' ordering-type='Field' />
+              <table-calc field='[dataengine.42312.720178888892].[Year 4 Position Min  (copy)]' ordering-field='[dataengine.42312.720178888892].[Stage 2]' ordering-type='Field' />
+              <table-calc field='[dataengine.42312.720178888892].[Year 6 Position (copy)]' level-address='[dataengine.42312.720178888892].[Stage 4]' ordering-type='Field'>
+                <order field='[dataengine.42312.720178888892].[Stage 4]' />
+                <order field='[dataengine.42312.720178888892].[Stage 3]' />
+                <order field='[dataengine.42312.720178888892].[Stage 2]' />
+                <order field='[dataengine.42312.720178888892].[Stage 1]' />
+                <order field='[dataengine.42312.720178888892].[Stage 5]' />
+              </table-calc>
+              <table-calc field='[dataengine.42312.720178888892].[Calculation_719450041680592898]' ordering-type='Field'>
+                <order field='[dataengine.42312.720178888892].[Stage 3]' />
+                <order field='[dataengine.42312.720178888892].[Stage 1]' />
+                <order field='[dataengine.42312.720178888892].[Stage 2]' />
+                <order field='[dataengine.42312.720178888892].[Stage 4]' />
+                <order field='[dataengine.42312.720178888892].[Stage 5]' />
+              </table-calc>
+              <table-calc field='[dataengine.42312.720178888892].[Year 4 Index (copy)]' level-address='[dataengine.42312.720178888892].[Stage 3]' ordering-type='Field'>
+                <order field='[dataengine.42312.720178888892].[Stage 3]' />
+                <order field='[dataengine.42312.720178888892].[Stage 1]' />
+                <order field='[dataengine.42312.720178888892].[Stage 2]' />
+                <order field='[dataengine.42312.720178888892].[Stage 4]' />
+                <order field='[dataengine.42312.720178888892].[Stage 5]' />
+              </table-calc>
+              <table-calc field='[dataengine.42312.720178888892].[Year 4 Position Max  (copy)]' ordering-type='Field'>
+                <order field='[dataengine.42312.720178888892].[Stage 3]' />
+                <order field='[dataengine.42312.720178888892].[Stage 1]' />
+                <order field='[dataengine.42312.720178888892].[Stage 2]' />
+                <order field='[dataengine.42312.720178888892].[Stage 4]' />
+                <order field='[dataengine.42312.720178888892].[Stage 5]' />
+              </table-calc>
+              <table-calc field='[dataengine.42312.720178888892].[Year 4 Position  (copy)]' level-address='[dataengine.42312.720178888892].[Stage 3]' ordering-type='Field'>
+                <order field='[dataengine.42312.720178888892].[Stage 3]' />
+                <order field='[dataengine.42312.720178888892].[Stage 1]' />
+                <order field='[dataengine.42312.720178888892].[Stage 2]' />
+                <order field='[dataengine.42312.720178888892].[Stage 4]' />
+                <order field='[dataengine.42312.720178888892].[Stage 5]' />
+              </table-calc>
+              <table-calc field='[dataengine.42312.720178888892].[Year 6 Position Max (copy)]' ordering-type='Field'>
+                <order field='[dataengine.42312.720178888892].[Stage 4]' />
+                <order field='[dataengine.42312.720178888892].[Stage 1]' />
+                <order field='[dataengine.42312.720178888892].[Stage 2]' />
+                <order field='[dataengine.42312.720178888892].[Stage 3]' />
+                <order field='[dataengine.42312.720178888892].[Stage 5]' />
+              </table-calc>
+              <table-calc field='[dataengine.42312.720178888892].[Year 4-5 Curve Max  (copy)]' ordering-field='[dataengine.42312.720178888892].[Stage 2]' ordering-type='Field' />
+            </column-instance>
+          </datasource-dependencies>
+          <sort class='manual' column='[dataengine.42312.720178888892].[none:Stage 3:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Proceed&quot;</bucket>
+              <bucket>&quot;Declined&quot;</bucket>
+              <bucket>&quot;Rejected&quot;</bucket>
+              <bucket>&quot;No Response&quot;</bucket>
+            </dictionary>
+          </sort>
+          <sort class='manual' column='[dataengine.42312.720178888892].[none:Stage 4:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;0&quot;</bucket>
+              <bucket>&quot;1&quot;</bucket>
+              <bucket>&quot;Proceed&quot;</bucket>
+              <bucket>&quot;Declined&quot;</bucket>
+              <bucket>&quot;Rejected&quot;</bucket>
+              <bucket>&quot;No Response&quot;</bucket>
+            </dictionary>
+          </sort>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[dataengine.42312.720178888892].[none:t:qk]' scope='cols' value='false' />
+            <format attr='subtitle' class='0' field='[dataengine.42312.720178888892].[none:t:qk]' scope='cols' value='' />
+            <format attr='auto-subtitle' class='0' field='[dataengine.42312.720178888892].[none:t:qk]' scope='cols' value='true' />
+            <format attr='display' class='0' field='[dataengine.42312.720178888892].[usr:Year 4-5 Polygonic  (copy):qk:2]' scope='rows' value='false' />
+            <format attr='subtitle' class='0' field='[dataengine.42312.720178888892].[usr:Year 4-5 Polygonic  (copy):qk:2]' scope='rows' value='' />
+            <format attr='auto-subtitle' class='0' field='[dataengine.42312.720178888892].[usr:Year 4-5 Polygonic  (copy):qk:2]' scope='rows' value='true' />
+            <encoding attr='space' class='0' domain-expand='false' field='[dataengine.42312.720178888892].[usr:Year 4-5 Polygonic  (copy):qk:2]' field-type='quantitative' max='2.0874999999999999' min='0.16250000000000001' range-type='fixed' reverse='true' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-style' data-class='total' scope='rows' value='none' />
+            <format attr='border-style' data-class='total' scope='cols' value='none' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-style' data-class='total' scope='rows' value='none' />
+            <format attr='border-style' data-class='total' scope='cols' value='none' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='line-visibility' scope='rows' value='off' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='header-div'>
+            <format attr='stroke-color' scope='rows' value='#ffffff' />
+            <format attr='line-pattern-only' scope='rows' value='solid' />
+            <format attr='line-visibility' scope='rows' value='on' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-disallow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Polygon' />
+            <encodings>
+              <lod column='[dataengine.42312.720178888892].[none:Stage 1:nk]' />
+              <lod column='[dataengine.42312.720178888892].[none:Stage 2:nk]' />
+              <lod column='[dataengine.42312.720178888892].[none:Stage 3:nk]' />
+              <lod column='[dataengine.42312.720178888892].[none:Stage 4:nk]' />
+              <color column='[dataengine.42312.720178888892].[none:Stage 5:nk]' />
+              <lod column='[dataengine.42312.720178888892].[none:Way of the walk:nk]' />
+              <path column='[dataengine.42312.720178888892].[sum:Path:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='cell'>
+                <format attr='vertical-align' value='center' />
+                <format attr='text-align' value='center' />
+                <format attr='wrap' value='on' />
+                <format attr='text-orientation' value='0' />
+              </style-rule>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='auto' />
+                <format attr='font-size' value='20' />
+                <format attr='font-family' value='Georgia' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[dataengine.42312.720178888892].[usr:Year 4-5 Polygonic  (copy):qk:2]</rows>
+        <cols>[dataengine.42312.720178888892].[none:t:qk]</cols>
+        <tooltip-style tooltip-mode='none' />
+      </table>
+    </worksheet>
+    <worksheet name='Stage 4 Stacked'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#000000' fontname='Courier New' fontsize='9'>Certified</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location id='Stage4Stacked' path='/workbooks/5StageSankey' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='5 Stage Sankey v.1 Extract' name='dataengine.42312.720178888892' />
+          </datasources>
+          <datasource-dependencies datasource='dataengine.42312.720178888892'>
+            <column caption='Flow Size' datatype='real' default-format='p0%' name='[Calculation_719450041680592898]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNT([RecordID])/Total(count([RecordID]))'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column datatype='string' name='[RecordID]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Stage 4]' role='dimension' type='nominal' />
+            <column caption='Stage 4 Bar Position' datatype='real' name='[Year 6 Bar Position (copy)]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='RUNNING_SUM(1/(SIZE()))+RUNNING_SUM([Calculation_719450041680592898]) - [Calculation_719450041680592898]'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column-instance column='[Stage 4]' derivation='None' name='[none:Stage 4:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_719450041680592898]' derivation='User' name='[usr:Calculation_719450041680592898:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' />
+            </column-instance>
+            <column-instance column='[Year 6 Bar Position (copy)]' derivation='User' name='[usr:Year 6 Bar Position (copy):qk:3]' pivot='key' type='quantitative'>
+              <table-calc ordering-field='[dataengine.42312.720178888892].[Stage 4]' ordering-type='Field' />
+              <table-calc field='[dataengine.42312.720178888892].[Calculation_719450041680592898]' ordering-field='[dataengine.42312.720178888892].[Stage 4]' ordering-type='Field' />
+            </column-instance>
+          </datasource-dependencies>
+          <sort class='manual' column='[dataengine.42312.720178888892].[none:Stage 4:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Exit (No Award)&quot;</bucket>
+              <bucket>&quot;Exit (With Award)&quot;</bucket>
+              <bucket>&quot;Graduating&quot;</bucket>
+              <bucket>&quot;Interrupted&quot;</bucket>
+              <bucket>&quot;Other/Results Not Known&quot;</bucket>
+              <bucket>&quot;Progress Credit Deficit / Go Part Time&quot;</bucket>
+              <bucket>&quot;Progress Full Credit&quot;</bucket>
+              <bucket>&quot;0&quot;</bucket>
+              <bucket>&quot;1&quot;</bucket>
+              <bucket>&quot;Proceed&quot;</bucket>
+              <bucket>&quot;Declined&quot;</bucket>
+              <bucket>&quot;Rejected&quot;</bucket>
+              <bucket>&quot;No Response&quot;</bucket>
+            </dictionary>
+          </sort>
+          <filter class='quantitative' column='[dataengine.42312.720178888892].[usr:Year 6 Bar Position (copy):qk:3]' included-values='all' />
+          <slices>
+            <column>[dataengine.42312.720178888892].[usr:Year 6 Bar Position (copy):qk:3]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[dataengine.42312.720178888892].[usr:Year 6 Bar Position (copy):qk:3]' scope='rows' value='false' />
+            <format attr='subtitle' class='0' field='[dataengine.42312.720178888892].[usr:Year 6 Bar Position (copy):qk:3]' scope='rows' value='' />
+            <format attr='auto-subtitle' class='0' field='[dataengine.42312.720178888892].[usr:Year 6 Bar Position (copy):qk:3]' scope='rows' value='true' />
+            <encoding attr='space' class='0' domain-expand='false' field='[dataengine.42312.720178888892].[usr:Year 6 Bar Position (copy):qk:3]' field-type='quantitative' max='2.0874999999999999' min='0.16249999999999998' range-type='fixed' reverse='true' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' value='118' />
+            <format attr='text-format' field='[dataengine.42312.720178888892].[usr:Calculation_719450041680592898:qk]' value='p0%' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-style' data-class='total' scope='rows' value='none' />
+            <format attr='border-style' data-class='total' scope='cols' value='none' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-style' data-class='total' scope='rows' value='none' />
+            <format attr='border-style' data-class='total' scope='cols' value='none' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='line-visibility' scope='rows' value='off' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='header-div'>
+            <format attr='stroke-color' scope='rows' value='#ffffff' />
+            <format attr='line-pattern-only' scope='rows' value='solid' />
+            <format attr='line-visibility' scope='rows' value='on' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-disallow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='GanttBar' />
+            <encodings>
+              <color column='[dataengine.42312.720178888892].[none:Stage 4:nk]' />
+              <size column='[dataengine.42312.720178888892].[usr:Calculation_719450041680592898:qk]' />
+              <text column='[dataengine.42312.720178888892].[none:Stage 4:nk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run bold='true' fontname='Gill Sans MT'>Stage 4</run>
+                <run fontname='Gill Sans MT'>&#10;&lt;[dataengine.42312.720178888892].[usr:Calculation_719450041680592898:qk]&gt; of job applications </run>
+                <run fontname='Gill Sans MT'>.</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='cell'>
+                <format attr='wrap' value='on' />
+                <format attr='text-orientation' value='0' />
+                <format attr='text-align' value='center' />
+                <format attr='vertical-align' value='center' />
+              </style-rule>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='auto' />
+                <format attr='font-family' value='Gill Sans MT' />
+                <format attr='font-size' value='6' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='size' value='1.9890055656433105' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-color' value='#898989' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[dataengine.42312.720178888892].[usr:Year 6 Bar Position (copy):qk:3]</rows>
+        <cols />
+      </table>
+    </worksheet>
+    <worksheet name='Stage 4-5 New'>
+      <repository-location id='Stage4-5New' path='/workbooks/5StageSankey' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='5 Stage Sankey v.1 Extract' name='dataengine.42312.720178888892' />
+          </datasources>
+          <datasource-dependencies datasource='dataengine.42312.720178888892'>
+            <column caption='Sigmoid' datatype='real' name='[Calculation_719450041680359425]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='1/(1+EXP(1)^-[t])' />
+            </column>
+            <column caption='Flow Size' datatype='real' default-format='p0%' name='[Calculation_719450041680592898]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNT([RecordID])/Total(count([RecordID]))'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column datatype='real' name='[Path]' role='measure' type='quantitative' />
+            <column datatype='string' name='[RecordID]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Stage 1]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Stage 2]' role='dimension' type='nominal' />
+            <column caption='Stage 4-5 Curve Max' datatype='real' name='[Stage 3-4 Curve Max (copy)]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Year 6 Position Max (copy)]+([Stage 4 Position Max  (copy)]-[Year 6 Position Max (copy)])*ATTR([Calculation_719450041680359425])'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Stage 4-5 Curve Min' datatype='real' name='[Stage 3-4 Curve Min (copy)]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Year 6 Position Min (copy)]+([Stage 4 Position Min  (copy)]-[Year 6 Position Min (copy)])*ATTR([Calculation_719450041680359425])'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Stage 4-5 Polygonic' datatype='real' name='[Stage 3-4 Polygonic (copy)]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='CASE ATTR([Way of the walk])&#13;&#10;&#13;&#10;WHEN &apos;Min&apos; THEN [Stage 3-4 Curve Min (copy)]&#13;&#10;WHEN &apos;Max&apos; THEN [Stage 3-4 Curve Max (copy)]&#13;&#10;&#13;&#10;END'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column datatype='string' name='[Stage 3]' role='dimension' type='nominal' />
+            <column caption='Stage 5 Index' datatype='integer' name='[Stage 4 Index (copy)]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='INDEX()'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Stage 5 Position ' datatype='real' name='[Stage 4 Position  (copy)]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Stage 4 Index (copy)]/(SIZE())'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Stage 5 Position Max' datatype='real' name='[Stage 4 Position Max  (copy)]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Stage 4 Position  (copy)] + RUNNING_SUM([Calculation_719450041680592898])'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Stage 5 Position Min' datatype='real' name='[Stage 4 Position Min  (copy)]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Stage 4 Position Max  (copy)]- [Calculation_719450041680592898]'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column datatype='string' name='[Stage 4]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Stage 5]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Way of the walk]' role='dimension' type='nominal' />
+            <column caption='Stage 4 Index' datatype='integer' name='[Year 6 Index (copy)]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='INDEX()'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Stage 4 Position ' datatype='real' name='[Year 6 Position (copy)]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Year 6 Index (copy)]/(SIZE())'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Stage 4 Position Max ' datatype='real' name='[Year 6 Position Max (copy)]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Year 6 Position (copy)] + RUNNING_SUM([Calculation_719450041680592898])'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Stage 4 Position Min ' datatype='real' name='[Year 6 Position Min (copy)]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Year 6 Position Max (copy)]- [Calculation_719450041680592898]'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column-instance column='[Stage 1]' derivation='None' name='[none:Stage 1:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Stage 2]' derivation='None' name='[none:Stage 2:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Stage 3]' derivation='None' name='[none:Stage 3:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Stage 4]' derivation='None' name='[none:Stage 4:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Stage 5]' derivation='None' name='[none:Stage 5:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Way of the walk]' derivation='None' name='[none:Way of the walk:nk]' pivot='key' type='nominal' />
+            <column-instance column='[t]' derivation='None' name='[none:t:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Path]' derivation='Sum' name='[sum:Path:qk]' pivot='key' type='quantitative' />
+            <column datatype='real' name='[t]' role='measure' type='quantitative' />
+            <column-instance column='[Stage 3-4 Polygonic (copy)]' derivation='User' name='[usr:Stage 3-4 Polygonic (copy):qk:12]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' />
+              <table-calc field='[dataengine.42312.720178888892].[Stage 4 Position  (copy)]' level-address='[dataengine.42312.720178888892].[Stage 5]' ordering-type='Field'>
+                <order field='[dataengine.42312.720178888892].[Stage 5]' />
+                <order field='[dataengine.42312.720178888892].[Stage 4]' />
+                <order field='[dataengine.42312.720178888892].[Stage 3]' />
+                <order field='[dataengine.42312.720178888892].[Stage 2]' />
+                <order field='[dataengine.42312.720178888892].[Stage 1]' />
+              </table-calc>
+              <table-calc field='[dataengine.42312.720178888892].[Year 6 Position Max (copy)]' ordering-type='Field'>
+                <order field='[dataengine.42312.720178888892].[Stage 4]' />
+                <order field='[dataengine.42312.720178888892].[Stage 1]' />
+                <order field='[dataengine.42312.720178888892].[Stage 2]' />
+                <order field='[dataengine.42312.720178888892].[Stage 3]' />
+                <order field='[dataengine.42312.720178888892].[Stage 5]' />
+              </table-calc>
+              <table-calc field='[dataengine.42312.720178888892].[Year 6 Position Min (copy)]' ordering-type='Rows' />
+              <table-calc field='[dataengine.42312.720178888892].[Year 6 Index (copy)]' level-address='[dataengine.42312.720178888892].[Stage 4]' ordering-type='Field'>
+                <order field='[dataengine.42312.720178888892].[Stage 4]' />
+                <order field='[dataengine.42312.720178888892].[Stage 1]' />
+                <order field='[dataengine.42312.720178888892].[Stage 2]' />
+                <order field='[dataengine.42312.720178888892].[Stage 3]' />
+                <order field='[dataengine.42312.720178888892].[Stage 5]' />
+              </table-calc>
+              <table-calc field='[dataengine.42312.720178888892].[Calculation_719450041680592898]' ordering-type='Field'>
+                <order field='[dataengine.42312.720178888892].[Stage 1]' />
+                <order field='[dataengine.42312.720178888892].[Stage 2]' />
+                <order field='[dataengine.42312.720178888892].[Stage 3]' />
+                <order field='[dataengine.42312.720178888892].[Stage 4]' />
+                <order field='[dataengine.42312.720178888892].[Stage 5]' />
+              </table-calc>
+              <table-calc field='[dataengine.42312.720178888892].[Stage 3-4 Curve Max (copy)]' ordering-type='Rows' />
+              <table-calc field='[dataengine.42312.720178888892].[Stage 4 Position Max  (copy)]' ordering-type='Field'>
+                <order field='[dataengine.42312.720178888892].[Stage 5]' />
+                <order field='[dataengine.42312.720178888892].[Stage 1]' />
+                <order field='[dataengine.42312.720178888892].[Stage 2]' />
+                <order field='[dataengine.42312.720178888892].[Stage 3]' />
+                <order field='[dataengine.42312.720178888892].[Stage 4]' />
+              </table-calc>
+              <table-calc field='[dataengine.42312.720178888892].[Year 6 Position (copy)]' level-address='[dataengine.42312.720178888892].[Stage 4]' ordering-type='Field'>
+                <order field='[dataengine.42312.720178888892].[Stage 4]' />
+                <order field='[dataengine.42312.720178888892].[Stage 1]' />
+                <order field='[dataengine.42312.720178888892].[Stage 2]' />
+                <order field='[dataengine.42312.720178888892].[Stage 3]' />
+                <order field='[dataengine.42312.720178888892].[Stage 5]' />
+              </table-calc>
+              <table-calc field='[dataengine.42312.720178888892].[Stage 3-4 Curve Min (copy)]' ordering-type='Rows' />
+              <table-calc field='[dataengine.42312.720178888892].[Stage 4 Position Min  (copy)]' ordering-type='Rows' />
+              <table-calc field='[dataengine.42312.720178888892].[Stage 4 Index (copy)]' level-address='[dataengine.42312.720178888892].[Stage 5]' ordering-type='Field'>
+                <order field='[dataengine.42312.720178888892].[Stage 5]' />
+                <order field='[dataengine.42312.720178888892].[Stage 4]' />
+                <order field='[dataengine.42312.720178888892].[Stage 3]' />
+                <order field='[dataengine.42312.720178888892].[Stage 2]' />
+                <order field='[dataengine.42312.720178888892].[Stage 1]' />
+              </table-calc>
+            </column-instance>
+          </datasource-dependencies>
+          <sort class='manual' column='[dataengine.42312.720178888892].[none:Stage 4:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;0&quot;</bucket>
+              <bucket>&quot;1&quot;</bucket>
+              <bucket>&quot;Proceed&quot;</bucket>
+              <bucket>&quot;Declined&quot;</bucket>
+              <bucket>&quot;Rejected&quot;</bucket>
+              <bucket>&quot;No Response&quot;</bucket>
+            </dictionary>
+          </sort>
+          <sort class='manual' column='[dataengine.42312.720178888892].[none:Stage 5:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Accepted&quot;</bucket>
+              <bucket>&quot;Offer Declined&quot;</bucket>
+              <bucket>&quot;Declined&quot;</bucket>
+              <bucket>&quot;Rejected&quot;</bucket>
+              <bucket>&quot;No Response&quot;</bucket>
+            </dictionary>
+          </sort>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[dataengine.42312.720178888892].[none:t:qk]' scope='cols' value='false' />
+            <encoding attr='space' class='0' field='[dataengine.42312.720178888892].[none:t:qk]' field-type='quantitative' max='6.0' min='-6.0' range-type='fixed' scope='cols' type='space' />
+            <format attr='subtitle' class='0' field='[dataengine.42312.720178888892].[none:t:qk]' scope='cols' value='' />
+            <format attr='auto-subtitle' class='0' field='[dataengine.42312.720178888892].[none:t:qk]' scope='cols' value='true' />
+            <format attr='display' class='0' field='[dataengine.42312.720178888892].[usr:Stage 3-4 Polygonic (copy):qk:12]' scope='rows' value='false' />
+            <encoding attr='space' class='0' domain-expand='false' field='[dataengine.42312.720178888892].[usr:Stage 3-4 Polygonic (copy):qk:12]' field-type='quantitative' max='2.0874999999999999' min='0.16250000000000001' range-type='fixed' reverse='true' scope='rows' type='space' />
+            <format attr='subtitle' class='0' field='[dataengine.42312.720178888892].[usr:Stage 3-4 Polygonic (copy):qk:12]' scope='rows' value='' />
+            <format attr='auto-subtitle' class='0' field='[dataengine.42312.720178888892].[usr:Stage 3-4 Polygonic (copy):qk:12]' scope='rows' value='true' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-style' data-class='total' scope='rows' value='none' />
+            <format attr='border-style' data-class='total' scope='cols' value='none' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-style' data-class='total' scope='rows' value='none' />
+            <format attr='border-style' data-class='total' scope='cols' value='none' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='line-visibility' scope='rows' value='off' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='header-div'>
+            <format attr='stroke-color' scope='rows' value='#ffffff' />
+            <format attr='line-pattern-only' scope='rows' value='solid' />
+            <format attr='line-visibility' scope='rows' value='on' />
+          </style-rule>
+          <style-rule element='legend'>
+            <format attr='col-width' field='[dataengine.42312.720178888892].[none:Stage 5:nk]' value='140' />
+            <format attr='font-family' value='Gill Sans MT' />
+            <format attr='font-size' value='4' />
+          </style-rule>
+          <style-rule element='legend-title'>
+            <format attr='font-size' value='3' />
+          </style-rule>
+          <style-rule element='legend-title-text'>
+            <format attr='color' field='[dataengine.42312.720178888892].[none:Stage 5:nk]' value='End Result' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-disallow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Polygon' />
+            <encodings>
+              <lod column='[dataengine.42312.720178888892].[none:Stage 1:nk]' />
+              <lod column='[dataengine.42312.720178888892].[none:Stage 2:nk]' />
+              <lod column='[dataengine.42312.720178888892].[none:Stage 3:nk]' />
+              <lod column='[dataengine.42312.720178888892].[none:Stage 4:nk]' />
+              <color column='[dataengine.42312.720178888892].[none:Stage 5:nk]' />
+              <lod column='[dataengine.42312.720178888892].[none:Way of the walk:nk]' />
+              <path column='[dataengine.42312.720178888892].[sum:Path:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='cell'>
+                <format attr='vertical-align' value='center' />
+                <format attr='text-align' value='center' />
+                <format attr='wrap' value='on' />
+                <format attr='text-orientation' value='0' />
+              </style-rule>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='auto' />
+                <format attr='font-size' value='20' />
+                <format attr='font-family' value='Georgia' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[dataengine.42312.720178888892].[usr:Stage 3-4 Polygonic (copy):qk:12]</rows>
+        <cols>[dataengine.42312.720178888892].[none:t:qk]</cols>
+        <tooltip-style tooltip-mode='none' />
+      </table>
+    </worksheet>
+    <worksheet name='Stage 5 Stacked'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#000000' fontname='Courier New' fontsize='9'>Certified</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location id='Stage5Stacked' path='/workbooks/5StageSankey' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='5 Stage Sankey v.1 Extract' name='dataengine.42312.720178888892' />
+          </datasources>
+          <datasource-dependencies datasource='dataengine.42312.720178888892'>
+            <column caption='Flow Size' datatype='real' default-format='p0%' name='[Calculation_719450041680592898]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNT([RecordID])/Total(count([RecordID]))'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column datatype='string' name='[RecordID]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Stage 5]' role='dimension' type='nominal' />
+            <column caption='Stage 4 Bar Position' datatype='real' name='[Year 6 Bar Position (copy)]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='RUNNING_SUM(1/(SIZE()))+RUNNING_SUM([Calculation_719450041680592898]) - [Calculation_719450041680592898]'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column-instance column='[RecordID]' derivation='CountD' name='[ctd:RecordID:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Stage 5]' derivation='None' name='[none:Stage 5:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_719450041680592898]' derivation='User' name='[usr:Calculation_719450041680592898:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' />
+            </column-instance>
+            <column-instance column='[Year 6 Bar Position (copy)]' derivation='User' name='[usr:Year 6 Bar Position (copy):qk:2]' pivot='key' type='quantitative'>
+              <table-calc ordering-field='[dataengine.42312.720178888892].[Stage 5]' ordering-type='Field' />
+              <table-calc field='[dataengine.42312.720178888892].[Calculation_719450041680592898]' ordering-field='[dataengine.42312.720178888892].[Stage 5]' ordering-type='Field' />
+            </column-instance>
+          </datasource-dependencies>
+          <sort class='manual' column='[dataengine.42312.720178888892].[none:Stage 5:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Accepted&quot;</bucket>
+              <bucket>&quot;Offer Declined&quot;</bucket>
+              <bucket>&quot;Declined&quot;</bucket>
+              <bucket>&quot;Rejected&quot;</bucket>
+              <bucket>&quot;No Response&quot;</bucket>
+            </dictionary>
+          </sort>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[dataengine.42312.720178888892].[usr:Year 6 Bar Position (copy):qk:2]' scope='rows' value='false' />
+            <format attr='subtitle' class='0' field='[dataengine.42312.720178888892].[usr:Year 6 Bar Position (copy):qk:2]' scope='rows' value='' />
+            <format attr='auto-subtitle' class='0' field='[dataengine.42312.720178888892].[usr:Year 6 Bar Position (copy):qk:2]' scope='rows' value='true' />
+            <encoding attr='space' class='0' domain-expand='false' field='[dataengine.42312.720178888892].[usr:Year 6 Bar Position (copy):qk:2]' field-type='quantitative' max='2.0874999999999999' min='0.16250000000000001' range-type='fixed' reverse='true' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' value='118' />
+            <format attr='text-format' field='[dataengine.42312.720178888892].[usr:Calculation_719450041680592898:qk]' value='p0%' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-style' data-class='total' scope='rows' value='none' />
+            <format attr='border-style' data-class='total' scope='cols' value='none' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-style' data-class='total' scope='rows' value='none' />
+            <format attr='border-style' data-class='total' scope='cols' value='none' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='line-visibility' scope='rows' value='off' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='header-div'>
+            <format attr='stroke-color' scope='rows' value='#ffffff' />
+            <format attr='line-pattern-only' scope='rows' value='solid' />
+            <format attr='line-visibility' scope='rows' value='on' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-disallow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='GanttBar' />
+            <encodings>
+              <color column='[dataengine.42312.720178888892].[none:Stage 5:nk]' />
+              <size column='[dataengine.42312.720178888892].[usr:Calculation_719450041680592898:qk]' />
+              <text column='[dataengine.42312.720178888892].[none:Stage 5:nk]' />
+              <tooltip column='[dataengine.42312.720178888892].[ctd:RecordID:qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run bold='true' fontname='Gill Sans MT'>Stage 5</run>
+                <run fontname='Gill Sans MT'>&#10;&lt;[dataengine.42312.720178888892].[ctd:RecordID:qk]&gt; job application(s) </run>
+                <run fontname='Gill Sans MT'>.</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='cell'>
+                <format attr='wrap' value='on' />
+                <format attr='text-orientation' value='0' />
+                <format attr='text-align' value='center' />
+                <format attr='vertical-align' value='center' />
+              </style-rule>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='auto' />
+                <format attr='font-family' value='Gill Sans MT' />
+                <format attr='font-size' value='6' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='size' value='1.9890055656433105' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-color' value='#898989' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[dataengine.42312.720178888892].[usr:Year 6 Bar Position (copy):qk:2]</rows>
+        <cols />
+      </table>
+    </worksheet>
+    <worksheet name='Year 1 Stacked'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#000000' fontname='Courier New' fontsize='10'>Registered</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location id='Year1Stacked' path='/workbooks/5StageSankey' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='5 Stage Sankey v.1 Extract' name='dataengine.42312.720178888892' />
+          </datasources>
+          <datasource-dependencies datasource='dataengine.42312.720178888892'>
+            <column caption='Flow Size' datatype='real' default-format='p0%' name='[Calculation_719450041680592898]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNT([RecordID])/Total(count([RecordID]))'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column datatype='string' name='[RecordID]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Stage 1]' role='dimension' type='nominal' />
+            <column caption='Stage 1 Bar Position' datatype='real' name='[Year 2 Bar Position  (copy)]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='RUNNING_SUM(1/(SIZE()))+RUNNING_SUM([Calculation_719450041680592898]) - [Calculation_719450041680592898]'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column-instance column='[Stage 1]' derivation='None' name='[none:Stage 1:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_719450041680592898]' derivation='User' name='[usr:Calculation_719450041680592898:qk:14]' pivot='key' type='quantitative'>
+              <table-calc ordering-field='[dataengine.42312.720178888892].[Stage 1]' ordering-type='Field' />
+            </column-instance>
+            <column-instance column='[Year 2 Bar Position  (copy)]' derivation='User' name='[usr:Year 2 Bar Position  (copy):qk:2]' pivot='key' type='quantitative'>
+              <table-calc ordering-field='[dataengine.42312.720178888892].[Stage 1]' ordering-type='Field' />
+              <table-calc field='[dataengine.42312.720178888892].[Calculation_719450041680592898]' ordering-field='[dataengine.42312.720178888892].[Stage 1]' ordering-type='Field' />
+            </column-instance>
+          </datasource-dependencies>
+          <sort class='manual' column='[dataengine.42312.720178888892].[none:Stage 1:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Exit (No Award)&quot;</bucket>
+              <bucket>&quot;Exit (With Award)&quot;</bucket>
+              <bucket>&quot;Graduating&quot;</bucket>
+              <bucket>&quot;Interrupted&quot;</bucket>
+              <bucket>&quot;Other/Results Not Known&quot;</bucket>
+              <bucket>&quot;Progress Credit Deficit / Go Part Time&quot;</bucket>
+              <bucket>&quot;Progress Full Credit&quot;</bucket>
+              <bucket>&quot;Proceed&quot;</bucket>
+              <bucket>&quot;Approached&quot;</bucket>
+              <bucket>&quot;Rejected&quot;</bucket>
+              <bucket>&quot;No Response&quot;</bucket>
+            </dictionary>
+          </sort>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[dataengine.42312.720178888892].[usr:Year 2 Bar Position  (copy):qk:2]' scope='rows' value='false' />
+            <encoding attr='space' class='0' domain-expand='false' field='[dataengine.42312.720178888892].[usr:Year 2 Bar Position  (copy):qk:2]' field-type='quantitative' max='2.0874999999999999' min='0.16249999999999998' range-type='fixed' reverse='true' scope='rows' type='space' />
+            <format attr='subtitle' class='0' field='[dataengine.42312.720178888892].[usr:Year 2 Bar Position  (copy):qk:2]' scope='rows' value='' />
+            <format attr='auto-subtitle' class='0' field='[dataengine.42312.720178888892].[usr:Year 2 Bar Position  (copy):qk:2]' scope='rows' value='true' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' value='222' />
+            <format attr='text-format' field='[dataengine.42312.720178888892].[usr:Calculation_719450041680592898:qk:14]' value='p0%' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-style' data-class='total' scope='rows' value='none' />
+            <format attr='border-style' data-class='total' scope='cols' value='none' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-style' data-class='total' scope='rows' value='none' />
+            <format attr='border-style' data-class='total' scope='cols' value='none' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='line-visibility' scope='rows' value='off' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='header-div'>
+            <format attr='stroke-color' scope='rows' value='#ffffff' />
+            <format attr='line-pattern-only' scope='rows' value='solid' />
+            <format attr='line-visibility' scope='rows' value='on' />
+          </style-rule>
+          <style-rule element='quick-filter'>
+            <format attr='font-family' value='Gill Sans MT' />
+            <format attr='font-size' value='12' />
+          </style-rule>
+          <style-rule element='quick-filter-title'>
+            <format attr='font-family' value='Gill Sans MT' />
+            <format attr='text-align' value='center' />
+            <format attr='font-size' value='12' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-disallow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='GanttBar' />
+            <encodings>
+              <color column='[dataengine.42312.720178888892].[none:Stage 1:nk]' />
+              <size column='[dataengine.42312.720178888892].[usr:Calculation_719450041680592898:qk:14]' />
+              <text column='[dataengine.42312.720178888892].[none:Stage 1:nk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run bold='true' fontname='Gill Sans MT'>Stage 1</run>
+                <run fontname='Gill Sans MT'>&#10;&lt;[dataengine.42312.720178888892].[usr:Calculation_719450041680592898:qk:14]&gt; of job applications </run>
+                <run fontname='Gill Sans MT'>.</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='cell'>
+                <format attr='wrap' value='on' />
+                <format attr='text-orientation' value='0' />
+                <format attr='vertical-align' value='center' />
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='auto' />
+                <format attr='font-family' value='Gill Sans MT' />
+                <format attr='font-size' value='6' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='size' value='1.9890055656433105' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-color' value='#898989' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[dataengine.42312.720178888892].[usr:Year 2 Bar Position  (copy):qk:2]</rows>
+        <cols />
+      </table>
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Final Dashboard'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='0' fontcolor='#000000' fontname='Gill Sans MT'>5 Stage Sankey</run>
+            <run fontalignment='0' fontcolor='#4f6e8d' fontname='Gill Sans MT' fontsize='12'>&#10;Template Sankey for 5 Stage Processes</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location id='FinalDashboard' path='/workbooks/5StageSankey' revision='' />
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones>
+        <zone h='100000' id='2' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='89750' id='39' param='horz' type='layout-flow' w='100000' x='0' y='10250'>
+            <zone h='89750' id='34' param='horz' type='layout-flow' w='100000' x='0' y='10250'>
+              <zone h='89750' id='26' param='vert' type='layout-flow' w='100000' x='0' y='10250'>
+                <zone h='89750' id='17' param='horz' type='layout-flow' w='100000' x='0' y='10250'>
+                  <zone fixed-size='952' h='89750' id='5' is-fixed='true' param='horz' type='layout-flow' w='100000' x='0' y='10250'>
+                    <zone fixed-size='952' h='89750' id='3' is-fixed='true' type='layout-basic' w='100000' x='0' y='10250'>
+                      <zone h='82066' id='1' name='Year 1 Stacked' show-title='false' w='8600' x='0' y='17934' />
+                      <zone h='82066' id='7' name='Stage 1-2 New' show-title='false' w='16400' x='8600' y='17934' />
+                      <zone h='82066' id='9' name='Stage 2 Stacked' show-title='false' w='8300' x='25000' y='17934' />
+                      <zone h='82066' id='12' name='Stage 3-4 New' show-title='false' w='13391' x='58000' y='17934' />
+                      <zone h='82066' id='14' name='Stage 4 Stacked' show-title='false' w='8809' x='71391' y='17934' />
+                      <zone h='82066' id='15' name='Stage 3 Stacked' show-title='false' w='8000' x='50000' y='17934' />
+                      <zone h='82066' id='20' name='Stage 2-3 New' show-title='false' w='16700' x='33300' y='17934' />
+                      <zone h='82066' id='21' name='Stage 5 Stacked' show-title='false' w='9600' x='90400' y='17934' />
+                      <zone h='82066' id='23' name='Stage 4-5 New' show-title='false' w='10200' x='80200' y='17934' />
+                      <zone forceUpdate='true' h='7684' id='41' type='text' w='8635' x='0' y='10250'>
+                        <formatted-text>
+                          <run bold='true' fontalignment='1' fontname='Gill Sans MT' fontsize='8'>Stage 1</run>
+                        </formatted-text>
+                      </zone>
+                      <zone forceUpdate='true' h='7684' id='43' type='text' w='10900' x='23900' y='10250'>
+                        <formatted-text>
+                          <run bold='true' fontalignment='1' fontname='Gill Sans MT' fontsize='8'>Stage 2</run>
+                        </formatted-text>
+                      </zone>
+                      <zone h='7684' id='60' type='empty' w='15265' x='8635' y='10250' />
+                      <zone forceUpdate='true' h='7684' id='45' type='text' w='8000' x='50000' y='10250'>
+                        <formatted-text>
+                          <run bold='true' fontalignment='1' fontname='Gill Sans MT' fontsize='8'>Stage 3</run>
+                        </formatted-text>
+                      </zone>
+                      <zone h='7684' id='61' type='empty' w='15200' x='34800' y='10250' />
+                      <zone forceUpdate='true' h='7684' id='47' type='text' w='11400' x='70300' y='10250'>
+                        <formatted-text>
+                          <run bold='true' fontalignment='1' fontname='Gill Sans MT' fontsize='8'>Stage 4</run>
+                        </formatted-text>
+                      </zone>
+                      <zone h='7684' id='62' type='empty' w='12300' x='58000' y='10250' />
+                      <zone forceUpdate='true' h='7684' id='49' type='text' w='9600' x='90400' y='10250'>
+                        <formatted-text>
+                          <run bold='true' fontalignment='1' fontname='Gill Sans MT' fontsize='8'>Stage 5</run>
+                        </formatted-text>
+                      </zone>
+                      <zone h='7684' id='63' type='empty' w='8700' x='81700' y='10250' />
+                    </zone>
+                  </zone>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone h='10250' id='25' type='title' w='100000' x='0' y='0' />
+        </zone>
+        <zone h='2500' id='24' name='Stage 4-5 New' pane-specification-id='0' param='[dataengine.42312.720178888892].[none:Stage 5:nk]' type='color' w='78900' x='25200' y='97250' />
+      </zones>
+    </dashboard>
+  </dashboards>
+  <windows source-height='22'>
+    <window class='dashboard' name='Final Dashboard'>
+      <viewpoints>
+        <viewpoint name='Stage 1-2 New'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Stage 2 Stacked'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Stage 2-3 New'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Stage 3 Stacked'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Stage 3-4 New'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Stage 4 Stacked'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Stage 4-5 New'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Stage 5 Stacked'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Year 1 Stacked'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+    </window>
+    <window class='worksheet' maximized='true' name='Year 1 Stacked'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card pane-specification-id='0' param='[dataengine.42312.720178888892].[none:Stage 1:nk]' type='color' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class='worksheet' name='Stage 1-2 New'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class='worksheet' name='Stage 2 Stacked'>
+      <cards>
+        <edge name='left'>
+          <strip size='300'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class='worksheet' name='Stage 2-3 New'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class='worksheet' name='Stage 3 Stacked'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='bottom'>
+          <strip size='74'>
+            <card type='caption' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class='worksheet' name='Stage 3-4 New'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class='worksheet' name='Stage 4 Stacked'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card pane-specification-id='0' param='[dataengine.42312.720178888892].[none:Stage 4:nk]' type='color' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[dataengine.42312.720178888892].[usr:Year 6 Bar Position (copy):qk:3]' show-domain='false' show-null-ctrls='false' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class='worksheet' name='Stage 4-5 New'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class='worksheet' name='Stage 5 Stacked'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+  </windows>
+</workbook>
